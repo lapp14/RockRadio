@@ -1,0 +1,43 @@
+.album{
+
+}
+
+.artist{
+
+}
+
+.song{
+
+}
+
+#feedback { 
+	font-size: 1.4em; 
+}
+
+#selectArtist .ui-selecting,
+#selectSongs .ui-selecting { 
+	background: #FECA40; 
+}
+
+#selectArtist .ui-selected,
+#selectSongs .ui-selected { 
+	background: #F39814; 
+	color: white; 
+}
+
+#selectArtist,
+#selectSongs  { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 60%; 
+}
+
+#selectArtist li,
+#selectSongs  li{ 
+	margin: 3px; 
+	padding: 0.4em; 
+	font-size: 1.4em; 
+	height: 18px; 
+}
+

@@ -4,16 +4,56 @@
 		<title></title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="../css/admin.css">
 	
 	</head>
 	
 	<body>
 	
 	
-		
+	
+	<ol id="selectArtist">
+		<li class="ui-widget-content artist">Artist 1</li>
+		<li class="ui-widget-content artist">Artist 2</li>
+		<li class="ui-widget-content artist">Artist 3</li>
+		<li class="ui-widget-content artist">Artist 4</li>
+		<li class="ui-widget-content artist">Artist 5</li>
+		<li class="ui-widget-content artist">Artist 6</li>
+		<li class="ui-widget-content artist">Artist 7</li>
+	</ol>
+	
+	<ol id="selectSongs">
+		<li class="ui-widget-content album">Album 1
+			<li class="ui-widget-content song">Song 1</li>
+			<li class="ui-widget-content">Song 2</li>
+		</li>
+		<li class="ui-widget-content">Album 2
+			<li class="ui-widget-content">Song 1</li>
+			<li class="ui-widget-content">Song 2</li>
+		</li>
+		<li class="ui-widget-content">Album 2
+			<li class="ui-widget-content">Song 1</li>
+			<li class="ui-widget-content">Song 2</li>
+		</li>
+	</ol>
+
+	
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery-1.11.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+	<script>	
+	$(function selectArtist() {
+		$( "#selectArtist" ).selectable();
+	});
+	
+	$(function selectSongs() {
+		$( "#selectSongs" ).selectable();
+	});
+	</script> 
+
+	
 	</body>
 </html>	
