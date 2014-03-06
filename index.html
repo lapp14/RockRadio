@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+	
+	</head>
+	
+	<body>
+	<div class="outer-container">
+		
+		<!-- menu bar -->
+		<div class="container-fluid">
+			<div class="navbar-brand">
+				Yo
+			</div>
+			<div class="float-right">
+				asd
+			</div>
+		</div>	
+		<div class="container-fluid" style="padding-right:0px">
+			<ul class="nav nav-tabs" style="float:right">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="recentsongs.html">Recent Songs</a></li>
+				<li><a href="artists.html">Artists</a></li>
+				<li><a href="shows.html">Radio Shows</a></li>
+				<li><a href="djs.html">DJs</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end menu bar -->
+		
+		<!-- content -->
+		<div class="container">
+			<!-- content-right -->
+			<div class="content-right">
+			<p>
+				<div class="capsule">Recently Played Songs</div>
+				
+				<div class="media">				
+					<a class="pull-left"><img class="prev-played" src="img/soundgarden-superunknown.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:26</div>
+					<h4 class="media-heading capsule">
+					Soundgarden - <em>4th of July</em>
+					</h4>
+					Superunknown
+					</div>
+				</div>
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/alice_in_chains-mtv_unplugged.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:21</div>
+					<h4 class="media-heading capsule">
+					Alice in Chains - <em>Brother</em>
+					</h4>
+					MTV Unplugged
+					</div>
+				</div>	
+		
+
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/stone_temple_pilots-core.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:17</div>
+					<h4 class="media-heading capsule">
+					Stone Temple Pilots - <em>Wicked Garden</em>
+					</h4>
+					Core
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/pearl_jam-ten.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:12</div>
+					<h4 class="media-heading capsule">
+					Pearl Jam - <em>Deep</em>
+					</h4>
+					Core
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/pearl_jam-live_on_two_legs.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:06</div>
+					<h4 class="media-heading capsule">
+					Pearl Jam - <em>Cordury</em>
+					</h4>
+					Live on Two Legs
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/screaming_trees-dust.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:00</div>
+					<h4 class="media-heading capsule">
+					Screaming Trees - <em>Dying Days</em>
+					</h4>
+					Dust
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/pink_floyd-wish_you_were_here.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">1:47</div>
+					<h4 class="media-heading capsule">
+					Pink Floyd - <em>Shine On You Crazy Diamond(Parts I-V)</em>
+					</h4>
+					Wish You Were Here
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/arctic_monkeys-am.png" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">1:42</div>
+					<h4 class="media-heading capsule">
+					Arctic Monkeys - <em>Fireside</em>
+					</h4>
+					AM
+					</div>
+				</div>	
+			</p>
+			</div>
+			<!-- end content-right -->
+			
+			
+			<!-- content-main -->
+			<div class="content-main">
+			<p>
+			<div class="capsule">Current Radio Show</div>
+			
+				
+				90s Grunge Hour with <a href="#">Dan Lapp</a>
+				<span class="right"><div class="capsule">Thursdays at 2:00pm</div></span>
+
+			</p>
+			<p>
+				<div class="btn-group btn-group-xs right">
+					<button class="expandPlayer">Expand Player <span class="glyphicon glyphicon-resize-full"</span></a>
+				</div>
+			
+			</p>		
+			</div>
+			<!-- end content-main -->
+			
+		
+		</div>
+		<!-- end content -->
+		
+	</div>
+	<!-- end outer container -->
+	
+	
+	
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	
+	<!-- popup player script -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+		
+			$('.expandPlayer').click(function(event){
+				window.open("player.html", "Player", "width=600, height=800");
+				event.preventDefault();
+			});
+		});
+	</script>
+	<!-- end popup player script -->
+
+	</body>	
+</html>
