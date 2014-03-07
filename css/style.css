@@ -1,27 +1,28 @@
 /**
  *	Color Scheme
  *
- *	Red: #820A00;
- *	Dark Grey:	#262526;
- *	Light Grey:	#B5B0A1;
- *	Lime:	#61FF36;
- *	Blue:	#07898F;
- *  Orange:	#FF690D;
+ *	white	#fff;
+ *	off white	#e6e6e6;
+ *	
+ *	
+ *
+ *
  */
  
  body{
 	font-size: 1.2em;
-	background: #B5B0A1;
-	color: #B5B0A1;
+	background: #e6e6e6;
+	color: #ffffff;
 }
  
 div.outer-container {
+	border: 1px solid black;
 	margin: 0 auto;
 	width: 900px;
 }
 
 div.container-fluid {
-	background: #820A00;
+	background: #0b3e6f;
 }
 
 div.float-right {
@@ -32,7 +33,7 @@ div.float-right {
 
 div.container {
 	padding: 5px;
-	background: #262526;
+	background: #474747;
 	width: 900px;
 }
 
@@ -53,17 +54,17 @@ div.content-right {
 }
 
 div.capsule {
-	color: #FF690D;
+	color: #FC7B12;
 	padding: 2px;
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-bottom: 5px;
-	background: black;
+	background: #0b3e6f;
 }
 
 div.player{
 	border: 1px solid black;
-	background: #820A00;
+	background: #2a2a2a;
 }
 
 div.playerNowPlaying{
@@ -72,10 +73,10 @@ div.playerNowPlaying{
 
 div.playerControls{
 	padding: 10px;
-	background: #B5B0A1;
+	background: #e6e6e6;
 	border-top: 1px solid black;
 	font-size: 1.6em;
-	color: #000;
+	color: #111;
 }
 
 .controlButton, 
@@ -86,7 +87,9 @@ div.playerControls{
 #volumeSlider{
 	width: 120px;
 	font-size: 0.8em;
-	background: #262526;
+	background: #111;
+	float:right; 
+	margin:7px;
 }
 
 img.prev-played{
@@ -102,7 +105,6 @@ img.prev-played{
 .media-body{
 	font-size: 0.9em;
 }
-
 
 /* Testing only 
 div{
@@ -132,7 +134,7 @@ a:hover{
   font-size: 1em;
   line-height: 1.5;
   border-radius: 3px;
-  background: #B5B0A1;
+  background: #C3C2C7;
 }
 
 .nav-tabs {
@@ -158,7 +160,7 @@ a:hover{
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #B5B0A1;
+  color: #C3C2C7;
   cursor: default;
   background-color: #262526;
   border: 1px solid #626163;

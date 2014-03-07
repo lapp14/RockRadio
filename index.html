@@ -164,21 +164,24 @@
 						</div>
 					</div>
 				</div>
+				
 				<div class="playerControls">
-					<a class="controlButton" href="#" onclick="togglePlayPause()">
-						<span id="playButton" class="glyphicon glyphicon-play"></span>
-						<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
-					</a>
-					
-					<a class="controlButton" href="#" onclick="volumeClick()">
-						<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
-						<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
-						<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
-					</a>
-					
 					<div id="volumeSlider"></div>
-					
-				</div>
+					<div style="float:right">
+						<a class="controlButton" href="#" onclick="volumeClick()">
+							<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
+							<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
+							<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+						</a>
+											
+					</div>
+					<div class="">
+						<a class="controlButton" href="#" onclick="togglePlayPause()">
+							<span id="playButton" class="glyphicon glyphicon-play"></span>
+							<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
+						</a>
+					</div>
+				</div>	
 			</div>
 			
 			<p>
@@ -186,7 +189,7 @@
 					<button class="expandPlayer">Expand Player <span class="glyphicon glyphicon-resize-full"</span></a>
 				</div>
 			
-			</p>		
+			</p>	
 			</div>
 			<!-- end content-main -->
 			
