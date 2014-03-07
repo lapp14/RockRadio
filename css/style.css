@@ -61,6 +61,34 @@ div.capsule {
 	background: black;
 }
 
+div.player{
+	border: 1px solid black;
+	background: #820A00;
+}
+
+div.playerNowPlaying{
+	padding: 10px;
+}
+
+div.playerControls{
+	padding: 10px;
+	background: #B5B0A1;
+	border-top: 1px solid black;
+	font-size: 1.6em;
+	color: #000;
+}
+
+.controlButton, 
+.controlButton:hover{
+	color: #000;
+}
+
+#volumeSlider{
+	width: 120px;
+	font-size: 0.8em;
+	background: #262526;
+}
+
 img.prev-played{
 	width: 80px;
 	height: 80px;

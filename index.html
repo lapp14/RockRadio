@@ -4,9 +4,13 @@
 		<title></title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	
+		  
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	
 	</head>
 	
@@ -144,6 +148,39 @@
 				<span class="right"><div class="capsule">Thursdays at 2:00pm</div></span>
 
 			</p>
+			
+			<br/>
+			<div class="player">
+			<div class="capsule">Now Playing...</div>
+				<div class="playerNowPlaying">			
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/soundgarden-badmotorfinger.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">2:31</div>
+						<h4 class="media-heading capsule">
+						Soundgarden - <em>Room a Thousand Years Wide</em>
+						</h4>
+						Badmotorfinger
+						</div>
+					</div>
+				</div>
+				<div class="playerControls">
+					<a class="controlButton" href="#" onclick="togglePlayPause()">
+						<span id="playButton" class="glyphicon glyphicon-play"></span>
+						<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
+					</a>
+					
+					<a class="controlButton" href="#" onclick="volumeClick()">
+						<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
+						<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
+						<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+					</a>
+					
+					<div id="volumeSlider"></div>
+					
+				</div>
+			</div>
+			
 			<p>
 				<div class="btn-group btn-group-xs right">
 					<button class="expandPlayer">Expand Player <span class="glyphicon glyphicon-resize-full"</span></a>
@@ -153,30 +190,66 @@
 			</div>
 			<!-- end content-main -->
 			
-		
 		</div>
 		<!-- end content -->
 		
 	</div>
 	<!-- end outer container -->
 	
-	
-	
-	
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-1.11.0.min.js"></script>
-	
-	<!-- popup player script -->
 	<script type="text/javascript">
-		$(document).ready(function(){
+		/* Player control scripts */		
+		var volume = 50;
+		var prevVolume = 0;
 		
+		$(function() {
+			$('#volumeSlider').slider({range: "min", value: 50, min: 0, max: 100,
+				change: function( event, ui ) {
+				
+				}
+			});
+		});
+		
+		function togglePlayPause(){
+			$('#playButton').toggle();
+			$('#pauseButton').toggle();
+		}
+		
+		function volumeClick(){
+			if(volume == 0){
+				volume = prevVolume;
+				prevVolume = 0;
+			}else{
+				prevVolume = volume;
+				volume = 0;
+			}
+			
+			changeVolumeGraphic();
+		}
+		
+		function changeVolumeGraphic(){
+			if(volume == 0){
+				$('#speakerMute').show();
+				$('#speakerLow').hide();
+				$('#speakerHigh').hide();
+			}else if(volume > 50){
+				$('#speakerHigh').show();
+				$('#speakerMute').hide();
+				$('#speakerLow').hide();
+			}else{
+				$('#speakerLow').show();
+				$('#speakerMute').hide();
+				$('#speakerHigh').hide();			
+			}
+		}
+					
+		/* popup player script */
+		$(document).ready(function(){
 			$('.expandPlayer').click(function(event){
 				window.open("player.html", "Player", "width=600, height=800");
 				event.preventDefault();
 			});
 		});
 	</script>
-	<!-- end popup player script -->
 
 	</body>	
 </html>
