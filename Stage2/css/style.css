@@ -1,0 +1,24 @@
+body{
+}
+
+.panel{
+	padding: 0 0;
+	border: 1px solid black;
+}
+
+div.containerPadded{
+	padding: 5px;
+}
+
+.textRight{
+	text-align: right;
+}
+
+.right{
+	float: right;
+}
+
+.prev-played{
+	height: 100px;
+	width: 100px;
+}
