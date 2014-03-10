@@ -10,7 +10,6 @@
 	</head>
 	
 	<body>
-	
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
@@ -32,21 +31,64 @@
 			</ul>
 		</div>
 		
-		
 		<div class="row-fluid">
+			<!-- main content -->
 			<div class="containerPadded col-md-8">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Now Playing...</h3>
+						<h3 class="panel-title">Current Radio Show</h3>
+							90s Grunge Hour with <a href="#">Dan Lapp</a>
+							<span class="right">Thursdays at <em>2:00 pm</em></span>
+						
 					</div>
 					<div class="panel-body">
-						Stuff
+						
+						<div class="player">
+						Now Playing...
+							<div class="playerNowPlaying">			
+								<div class="media">
+									<a class="pull-left"><img class="prev-played" src="img/soundgarden-badmotorfinger.jpg" alt=""></a>					
+									<div class="media-body">
+									2:31 pm
+										<h4 class="media-heading playerSong">
+											Soundgarden - <em>Room a Thousand Years Wide</em>
+										</h4>
+										<span class="playerAlbum">
+											Badmotorfinger
+										</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="playerControls">
+								<div id="volumeSlider"></div>
+								<div class="right">
+									<a class="controlButton" href="#" onclick="volumeClick()">
+										<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
+										<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
+										<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+										&nbsp;
+									</a>				
+								</div>
+								
+								<div class="">
+									<a class="controlButton" href="#" onclick="togglePlayPause()">
+										<span id="playButton" class="glyphicon glyphicon-play"></span>
+										<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
+									</a>
+								</div>
+							</div>	
+						</div>
+						
+						
+						
 					</div>
 				</div>
 			</div>
 		
+			<!-- prev played -->
 			<div class="containerPadded col-md-4">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h3 class="panel-title">Now Playing...</h3>
 					</div>
@@ -72,5 +114,101 @@
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+		/* Player control scripts */		
+		var volume = 50;
+		var prevVolume = 0;
+		
+		$(function() {
+			$('#volumeSlider').slider({range: "min", value: 50, min: 0, max: 100,
+				slide: function( event, ui ){
+					volume = $('#volumeSlider').slider("option", "value");
+					changeVolumeGraphic();
+				},
+				
+				change: function(event, ui) {
+					changeVolumeGraphic();
+				}
+			});
+		});
+		
+		function togglePlayPause(){
+			$('#playButton').toggle();
+			$('#pauseButton').toggle();
+		}
+		
+		function volumeClick(){
+			if(volume == 0){
+				volume = prevVolume;
+				prevVolume = 0;
+			}else{
+				prevVolume = volume;
+				volume = 0;
+			}
+			
+			//set slider to current volume, and update graphic
+			$('#volumeSlider').slider("option", "value", volume);
+		}
+		
+		function changeVolumeGraphic(){
+			if(volume == 0){
+				$('#speakerMute').show();
+				$('#speakerLow').hide();
+				$('#speakerHigh').hide();
+			}else if(volume > 50){
+				$('#speakerHigh').show();
+				$('#speakerMute').hide();
+				$('#speakerLow').hide();
+			}else{
+				$('#speakerLow').show();
+				$('#speakerMute').hide();
+				$('#speakerHigh').hide();			
+			}
+		}
+		
+		/* called to validate song request form */
+		function submitSongRequest(){
+			$('#songSubmitFailed').hide();
+			$('#songSubmitSuccess').hide();
+			
+			var artist = $('#submitArtist').val();
+			var song = $('#submitSong').val();
+			var album = $('#submitAlbum').val();
+			var name = $('#submitName').val();
+			var email = $('#submitEmail').val();			
+			
+			if (artist == "") {	
+				$('#songSubmitFailed').html("Please specify Artist.");
+				$('#songSubmitFailed').show();
+			} else if (song == "") {	
+				$('#songSubmitFailed').html("Please specify Song.");
+				$('#songSubmitFailed').show();
+			} else if (name == "") {	
+				$('#songSubmitFailed').html("Please fill in your Name.");
+				$('#songSubmitFailed').show();
+			} else if (!validateEmail(email)) {	
+				$('#songSubmitFailed').html("Please enter a valid Email");
+				$('#songSubmitFailed').show();
+			} else {
+				$('#songSubmitSuccess').show();
+			}
+		}
+		
+		/* checks if an email is valid */
+		function validateEmail(email) {
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9])+$/;
+			return regex.test(email);
+		}
+					
+		/* popup player script */
+		$(document).ready(function(){
+			$('.expandPlayer').click(function(event){
+				window.open("player.html", "Player", "width=600, height=800");
+				event.preventDefault();
+			});
+		});
+	</script>
+	
 	</body>
 </html>

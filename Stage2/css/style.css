@@ -1,6 +1,43 @@
 body{
 }
 
+a, a:hover{
+	color: #000;
+}
+
+.capsule{
+	background: #000;
+}
+
+/* Player controls */
+.player{
+	padding: 0px 5px;
+	max-width: 400px;
+	border: 1px solid black;
+}
+
+.ui-slider{
+	margin-top: 5px;
+	font-size: 0.9em;
+	width: 120px;
+	float: right;
+}
+
+.controlButton, 
+.controlButton:hover{
+	color: #000;
+}
+
+.playerControls{
+	font-size: 1.2em;
+	padding: 8px;
+}
+
+
+.panel-title{
+	font-size: 1.2em;
+}
+
 .panel{
 	padding: 0 0;
 	border: 1px solid black;
