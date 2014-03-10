@@ -9,7 +9,7 @@
 	<link href="css/style.css" rel="stylesheet">
 		  
 	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	
 	</head>
@@ -242,8 +242,11 @@
 		
 		$(function() {
 			$('#volumeSlider').slider({range: "min", value: 50, min: 0, max: 100,
-				slide: function( event, ui ) {
+				slide: function( event, ui ){
 					volume = $('#volumeSlider').slider("option", "value");
+				},
+				
+				change: function(event, ui) {
 					changeVolumeGraphic();
 				}
 			});
@@ -265,7 +268,6 @@
 			
 			//set slider to current volume, and update graphic
 			$('#volumeSlider').slider("option", "value", volume);
-			changeVolumeGraphic();
 		}
 		
 		function changeVolumeGraphic(){

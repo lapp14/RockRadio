@@ -6,43 +6,102 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<link type="text/css" href="../css/jscrollpane.css" rel="stylesheet" media="all" />
 	<link rel="stylesheet" href="../css/admin.css">
+	<link rel="stylesheet" href="../css/style.css">
 	
 	</head>
 	
-	<body>
-	
-	
-	
-	<ol id="selectArtist">
-		<li class="ui-widget-content artist">Artist 1</li>
-		<li class="ui-widget-content artist">Artist 2</li>
-		<li class="ui-widget-content artist">Artist 3</li>
-		<li class="ui-widget-content artist">Artist 4</li>
-		<li class="ui-widget-content artist">Artist 5</li>
-		<li class="ui-widget-content artist">Artist 6</li>
-		<li class="ui-widget-content artist">Artist 7</li>
-	</ol>
-	
-	<ol id="selectSongs">
-		<li class="ui-widget-content album">Album 1
-			<li class="ui-widget-content song">Song 1</li>
-			<li class="ui-widget-content">Song 2</li>
-		</li>
-		<li class="ui-widget-content">Album 2
-			<li class="ui-widget-content">Song 1</li>
-			<li class="ui-widget-content">Song 2</li>
-		</li>
-		<li class="ui-widget-content">Album 2
-			<li class="ui-widget-content">Song 1</li>
-			<li class="ui-widget-content">Song 2</li>
-		</li>
-	</ol>
+	<body>			
+	<div class="songSelection">
+		<div class="songSelectionContainer">
+				<div>
+					<img class="prev-played" src="../img/soundgarden-superunknown.jpg" style="vertical-align: middle" alt=""> 	
+					<em>Soundgarden</em>
+						<div class="scroll-pane songs">
+				
+
+						<ol id="selectSongs">
+								<div class="media">				
+									<a class="pull-left"><img class="prev-played" src="../img/soundgarden-superunknown.jpg" alt=""></a>					
+									<div class="media-body">
+									<div class="capsule">2:26 pm</div>
+									<h4 class="media-heading capsule">
+									Soundgarden - <em>4th of July</em>
+									</h4>
+									Superunknown
+									</div>
+								</div>
+							
+
+								<li class="ui-widget-content song">Song 1</li>
+								<li class="ui-widget-content">Song 2</li>
+							</li>
+							<li class="ui-widget-content">Album 2
+								<li class="ui-widget-content">Song 1</li>
+								<li class="ui-widget-content">Song 2</li>
+							</li>
+							<li class="ui-widget-content">Album 2
+								<li class="ui-widget-content">Song 1</li>
+								<li class="ui-widget-content">Song 2</li>
+							</li>
+						</ol>
+				
+				
+						</div>
+				</div>
+		</div>
+		
+		<div class="artistContainer">
+			Artists
+			<div class="scroll-pane artist">
+				<ol id="selectArtist">
+					<li class="ui-widget-content artist">AC-DC</li>
+					<li class="ui-widget-content artist">Alan Parson's Project</li>
+					<li class="ui-widget-content artist">Alice in Chains</li>
+					<li class="ui-widget-content artist">Audioslave</li>
+					<li class="ui-widget-content artist">The Beatles</li>
+					<li class="ui-widget-content artist">The Black Keys</li>
+					<li class="ui-widget-content artist">Black Sabbath</li>
+					<li class="ui-widget-content artist">Cream</li>
+					<li class="ui-widget-content artist">Crosby, Stills, Nash & Young</li>
+					<li class="ui-widget-content artist">Dave Matthews Band</li>
+					<li class="ui-widget-content artist">Dire Straits</li>
+					<li class="ui-widget-content artist">Eric Clapton</li>
+					<li class="ui-widget-content artist">Genesis</li>
+					<li class="ui-widget-content artist">Incubus</li>
+					<li class="ui-widget-content artist">Jethro Tull</li>
+					<li class="ui-widget-content artist">Jimi Hendrix</li>
+					<li class="ui-widget-content artist">Joe Satriani</li>
+					<li class="ui-widget-content artist">Led Zeppelin</li>
+					<li class="ui-widget-content artist">Matthew Good Band</li>
+					<li class="ui-widget-content artist">Neil Young</li>
+					<li class="ui-widget-content artist">Ozzy Osbourne</li>
+					<li class="ui-widget-content artist">Pearl Jam</li>
+					<li class="ui-widget-content artist">Pink Floyd</li>
+					<li class="ui-widget-content artist">Queens of the Stone Age</li>
+					<li class="ui-widget-content artist">Radiohead</li>
+					<li class="ui-widget-content artist">Red Hot Chili Peppers</li>
+					<li class="ui-widget-content artist">The Rolling Stones</li>
+					<li class="ui-widget-content artist">Smashing Pumpkins</li>
+					<li class="ui-widget-content artist">Stone Temple Pilots</li>
+					<li class="ui-widget-content artist">Tool</li>
+					<li class="ui-widget-content artist">The Tragically Hip</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+		
 
 	
-	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery-1.11.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	
+	<!-- the mousewheel plugin -->
+	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+	<!-- the jScrollPane script -->
+	<script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
 	
 	<script>	
 	$(function selectArtist() {
@@ -51,6 +110,16 @@
 	
 	$(function selectSongs() {
 		$( "#selectSongs" ).selectable();
+	});
+	
+	$(function()
+	{
+		$('.scroll-pane-artist').jScrollPane();
+	});
+	
+	$(function()
+	{
+		$('.scroll-pane-songs').jScrollPane();
 	});
 	</script> 
 

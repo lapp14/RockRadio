@@ -1,12 +1,44 @@
-.album{
+.songSelection{
+	width: 750px;
+}
 
+.artistContainer{
+	border: 1px solid black;
+	width:252px;
+	padding: 5px;
+}
+
+.songSelectionContainer{
+	border: 1px solid black;
+	width: 700px;
+	padding: 5px;
+	float: right;
+}
+
+.songSelection{
+	width: 1000px;
+	border: 1px solid black;
 }
 
 .artist{
-
+	width: 250px;
+	height: 800px;
 }
 
-.song{
+.songs{
+		width: 400px;
+		height: 650px;
+		margin-left: 100px;
+}
+
+.scroll-pane{
+	font-size: 0.6em;
+	font-family: Arial, sans-serif;
+	overflow: auto;
+}
+
+.right{
+	float: right;
 
 }
 
@@ -30,7 +62,6 @@
 	list-style-type: none; 
 	margin: 0; 
 	padding: 0; 
-	width: 60%; 
 }
 
 #selectArtist li,
@@ -39,5 +70,12 @@
 	padding: 0.4em; 
 	font-size: 1.4em; 
 	height: 18px; 
+	width:90%;
 }
 
+
+.horizontal-only
+{
+	height: auto;
+	max-height: 200px;
+}
