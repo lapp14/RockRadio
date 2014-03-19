@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+		  
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	</head>
+	
+	<body>
+	<div class="outer-container">
+		
+		<!-- menu bar -->
+		<div class="row-fluid">
+			<div class="navbar-brand">
+				Yo
+			</div>
+			<div class="float-right">
+				asd
+			</div>
+		</div>	
+		<div class="container-fluid" style="padding-right:0px">
+			<ul class="nav nav-tabs" style="float:right">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="recentsongs.html">Recent Songs</a></li>
+				<li><a href="artists.html">Artists</a></li>
+				<li><a href="shows.html">Radio Shows</a></li>
+				<li><a href="djs.html">DJs</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end menu bar -->
+		
+		<!-- content -->
+		<div class="container">
+			<!-- content-right -->
+			<div class="content-right">
+			<p>
+				<div class="capsule">Recently Played Songs</div>
+				
+				<div class="media">				
+					<a class="pull-left"><img class="prev-played" src="img/soundgarden-superunknown.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:26 pm</div>
+					<h4 class="media-heading capsule">
+					Soundgarden - <em>4th of July</em>
+					</h4>
+					Superunknown
+					</div>
+				</div>
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/alice_in_chains-mtv_unplugged.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:21 pm</div>
+					<h4 class="media-heading capsule">
+					Alice in Chains - <em>Brother</em>
+					</h4>
+					MTV Unplugged
+					</div>
+				</div>	
+		
+
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/stone_temple_pilots-core.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:17 pm</div>
+					<h4 class="media-heading capsule">
+					Stone Temple Pilots - <em>Wicked Garden</em>
+					</h4>
+					Core
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/pearl_jam-ten.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:12 pm</div>
+					<h4 class="media-heading capsule">
+					Pearl Jam - <em>Deep</em>
+					</h4>
+					Core
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/pearl_jam-live_on_two_legs.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:06 pm</div>
+					<h4 class="media-heading capsule">
+					Pearl Jam - <em>Cordury</em>
+					</h4>
+					Live on Two Legs
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/screaming_trees-dust.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">2:00 pm</div>
+					<h4 class="media-heading capsule">
+					Screaming Trees - <em>Dying Days</em>
+					</h4>
+					Dust
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/pink_floyd-wish_you_were_here.jpg" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">1:47 pm</div>
+					<h4 class="media-heading capsule">
+					Pink Floyd - <em>Shine On You Crazy Diamond(Parts I-V)</em>
+					</h4>
+					Wish You Were Here
+					</div>
+				</div>	
+				
+				<div class="media">
+					<a class="pull-left"><img class="prev-played" src="img/arctic_monkeys-am.png" alt=""></a>					
+					<div class="media-body">
+					<div class="capsule">1:42 pm</div>
+					<h4 class="media-heading capsule">
+					Arctic Monkeys - <em>Fireside</em>
+					</h4>
+					AM
+					</div>
+				</div>	
+			</p>
+			</div>
+			<!-- end content-right -->
+			
+			
+			<!-- content-main -->
+			<div class="content-main">
+			<p>
+			<div class="innerContent">
+			<div class="capsule">Current Radio Show</div>
+			
+				
+				90s Grunge Hour with <a href="#">Dan Lapp</a>
+				<span class="right"><div class="capsule">Thursdays at <em>2:00 pm</em></div></span>
+
+			</p>
+			
+			<br/>
+				<div class="player" id="redGradient">
+				<div class="capsule">Now Playing...</div>
+					<div class="playerNowPlaying">			
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/soundgarden-badmotorfinger.jpg" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule capsuleSmall right">2:31 pm</div>
+								<h4 class="media-heading capsule playerSong">
+									Soundgarden - <em>Room a Thousand Years Wide</em>
+								</h4>
+								<span class="playerAlbum">
+									Badmotorfinger
+								</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="playerControls" id="greenGradient">
+						<div id="volumeSlider"></div>
+						<div style="float:right">
+							<a class="controlButton" href="#" onclick="volumeClick()">
+								<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
+								<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
+								<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+								&nbsp;
+							</a>
+												
+						</div>
+						<div class="">
+							<a class="controlButton" href="#" onclick="togglePlayPause()">
+								<span id="playButton" class="glyphicon glyphicon-play"></span>
+								<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
+							</a>
+						</div>
+					</div>	
+				</div>
+				
+				<p>
+					<div class="btn-group btn-group-xs right">
+						<button class="expandPlayer">Expand Player <span class="glyphicon glyphicon-resize-full"</span></a>
+					</div>
+				
+				</p>
+			</div>
+			
+			<div class="innerContent">
+			<div class="capsule">Request a Song</div>
+			
+				<form name="requestSong" style="border: 1px solid black">
+					<p>
+						<div class="input-group">
+							<input type="text" class="form-control" id="submitArtist" placeholder="Artist" style="width:255px">
+							<input type="text" class="form-control" id="submitSong" placeholder="Song" style="width:265px">
+						</div>
+						<div class="input-group">
+							<input type="text" class="form-control" id="submitAlbum" placeholder="Album (optional)"  style="width:255px">
+						</div>
+					</p>
+					<p>
+						<div class="input-group">
+							<input type="text" class="form-control" id="submitName" placeholder="Name" style="width:255px">
+							<input type="text" class="form-control" id="submitEmail" placeholder="Email" style="width:265px">
+						</div>
+					</p>
+				
+				<div class="btn-group">
+					<button type="button" onClick="submitSongRequest()" class="btn btn-default" style="margin-left:20px;">Submit</button>
+				</div>
+				<p>
+					<div id="songSubmitSuccess" class="alert alert-success"  style="display:none">Song submitted successfully!</div>
+					<div id="songSubmitFailed" class="alert alert-danger" style="display:none">asd</div>
+				</p>
+			</div>
+			
+			
+			</div>
+			<!-- end content-main -->
+			
+		</div>
+		<!-- end content -->
+		
+	</div>
+	<!-- end outer container -->
+	
+	<script type="text/javascript">
+		/* Player control scripts */		
+		var volume = 50;
+		var prevVolume = 0;
+		
+		$(function() {
+			$('#volumeSlider').slider({range: "min", value: 50, min: 0, max: 100,
+				slide: function( event, ui ){
+					volume = $('#volumeSlider').slider("option", "value");
+				},
+				
+				change: function(event, ui) {
+					changeVolumeGraphic();
+				}
+			});
+		});
+		
+		function togglePlayPause(){
+			$('#playButton').toggle();
+			$('#pauseButton').toggle();
+		}
+		
+		function volumeClick(){
+			if(volume == 0){
+				volume = prevVolume;
+				prevVolume = 0;
+			}else{
+				prevVolume = volume;
+				volume = 0;
+			}
+			
+			//set slider to current volume, and update graphic
+			$('#volumeSlider').slider("option", "value", volume);
+		}
+		
+		function changeVolumeGraphic(){
+			if(volume == 0){
+				$('#speakerMute').show();
+				$('#speakerLow').hide();
+				$('#speakerHigh').hide();
+			}else if(volume > 50){
+				$('#speakerHigh').show();
+				$('#speakerMute').hide();
+				$('#speakerLow').hide();
+			}else{
+				$('#speakerLow').show();
+				$('#speakerMute').hide();
+				$('#speakerHigh').hide();			
+			}
+		}
+		
+		/* called to validate song request form */
+		function submitSongRequest(){
+			$('#songSubmitFailed').hide();
+			$('#songSubmitSuccess').hide();
+			
+			var artist = $('#submitArtist').val();
+			var song = $('#submitSong').val();
+			var album = $('#submitAlbum').val();
+			var name = $('#submitName').val();
+			var email = $('#submitEmail').val();			
+			
+			if (artist == "") {	
+				$('#songSubmitFailed').html("Please specify Artist.");
+				$('#songSubmitFailed').show();
+			} else if (song == "") {	
+				$('#songSubmitFailed').html("Please specify Song.");
+				$('#songSubmitFailed').show();
+			} else if (name == "") {	
+				$('#songSubmitFailed').html("Please fill in your Name.");
+				$('#songSubmitFailed').show();
+			} else if (!validateEmail(email)) {	
+				$('#songSubmitFailed').html("Please enter a valid Email");
+				$('#songSubmitFailed').show();
+			} else {
+				$('#songSubmitSuccess').show();
+			}
+		}
+		
+		/* checks if an email is valid */
+		function validateEmail(email) {
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9])+$/;
+			return regex.test(email);
+		}
+					
+		/* popup player script */
+		$(document).ready(function(){
+			$('.expandPlayer').click(function(event){
+				window.open("player.html", "Player", "width=600, height=800");
+				event.preventDefault();
+			});
+		});
+	</script>
+
+	</body>	
+</html>

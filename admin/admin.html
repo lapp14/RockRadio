@@ -7,90 +7,101 @@
 		
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 	<link type="text/css" href="../css/jscrollpane.css" rel="stylesheet" media="all" />
+	<link rel="stylesheet" href="../css/bootstrap.css">
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/style.css">
 	
 	</head>
 	
 	<body>			
-	<div class="songSelection">
-		<div class="songSelectionContainer">
-				<div>
-					<img class="prev-played" src="../img/soundgarden-superunknown.jpg" style="vertical-align: middle" alt=""> 	
-					<em>Soundgarden</em>
-						<div class="scroll-pane songs">
-				
-
-						<ol id="selectSongs">
-								<div class="media">				
-									<a class="pull-left"><img class="prev-played" src="../img/soundgarden-superunknown.jpg" alt=""></a>					
-									<div class="media-body">
-									<div class="capsule">2:26 pm</div>
-									<h4 class="media-heading capsule">
-									Soundgarden - <em>4th of July</em>
-									</h4>
-									Superunknown
-									</div>
-								</div>
-							
-
-								<li class="ui-widget-content song">Song 1</li>
-								<li class="ui-widget-content">Song 2</li>
-							</li>
-							<li class="ui-widget-content">Album 2
-								<li class="ui-widget-content">Song 1</li>
-								<li class="ui-widget-content">Song 2</li>
-							</li>
-							<li class="ui-widget-content">Album 2
-								<li class="ui-widget-content">Song 1</li>
-								<li class="ui-widget-content">Song 2</li>
-							</li>
-						</ol>
-				
-				
-						</div>
-				</div>
-		</div>
-		
-		<div class="artistContainer">
-			Artists
-			<div class="scroll-pane artist">
+	<!-- song selection container -->
+	<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="artistTitle">
+				Artists
+			</div>
+			<div class="scroll-pane">
 				<ol id="selectArtist">
-					<li class="ui-widget-content artist">AC-DC</li>
-					<li class="ui-widget-content artist">Alan Parson's Project</li>
-					<li class="ui-widget-content artist">Alice in Chains</li>
-					<li class="ui-widget-content artist">Audioslave</li>
-					<li class="ui-widget-content artist">The Beatles</li>
-					<li class="ui-widget-content artist">The Black Keys</li>
-					<li class="ui-widget-content artist">Black Sabbath</li>
-					<li class="ui-widget-content artist">Cream</li>
-					<li class="ui-widget-content artist">Crosby, Stills, Nash & Young</li>
-					<li class="ui-widget-content artist">Dave Matthews Band</li>
-					<li class="ui-widget-content artist">Dire Straits</li>
-					<li class="ui-widget-content artist">Eric Clapton</li>
-					<li class="ui-widget-content artist">Genesis</li>
-					<li class="ui-widget-content artist">Incubus</li>
-					<li class="ui-widget-content artist">Jethro Tull</li>
-					<li class="ui-widget-content artist">Jimi Hendrix</li>
-					<li class="ui-widget-content artist">Joe Satriani</li>
-					<li class="ui-widget-content artist">Led Zeppelin</li>
-					<li class="ui-widget-content artist">Matthew Good Band</li>
-					<li class="ui-widget-content artist">Neil Young</li>
-					<li class="ui-widget-content artist">Ozzy Osbourne</li>
-					<li class="ui-widget-content artist">Pearl Jam</li>
-					<li class="ui-widget-content artist">Pink Floyd</li>
-					<li class="ui-widget-content artist">Queens of the Stone Age</li>
-					<li class="ui-widget-content artist">Radiohead</li>
-					<li class="ui-widget-content artist">Red Hot Chili Peppers</li>
-					<li class="ui-widget-content artist">The Rolling Stones</li>
-					<li class="ui-widget-content artist">Smashing Pumpkins</li>
-					<li class="ui-widget-content artist">Stone Temple Pilots</li>
-					<li class="ui-widget-content artist">Tool</li>
-					<li class="ui-widget-content artist">The Tragically Hip</li>
+					<li class="ui-widget-content ">AC-DC</li>
+					<li class="ui-widget-content">Alan Parson's Project</li>
+					<li class="ui-widget-content">Alice in Chains</li>
+					<li class="ui-widget-content">Audioslave</li>
+					<li class="ui-widget-content">The Beatles</li>
+					<li class="ui-widget-content">The Black Keys</li>
+					<li class="ui-widget-content">Black Sabbath</li>
+					<li class="ui-widget-content">Cream</li>
+					<li class="ui-widget-content">Crosby, Stills, Nash & Young</li>
+					<li class="ui-widget-content">Dave Matthews Band</li>
+					<li class="ui-widget-content">Dire Straits</li>
+					<li class="ui-widget-content">Eric Clapton</li>
+					<li class="ui-widget-content">Genesis</li>
+					<li class="ui-widget-content">Incubus</li>
+					<li class="ui-widget-content">Jethro Tull</li>
+					<li class="ui-widget-content">Jimi Hendrix</li>
+					<li class="ui-widget-content">Joe Satriani</li>
+					<li class="ui-widget-content">Led Zeppelin</li>
+					<li class="ui-widget-content">Matthew Good Band</li>
+					<li class="ui-widget-content">Neil Young</li>
+					<li class="ui-widget-content">Ozzy Osbourne</li>
+					<li class="ui-widget-content">Pearl Jam</li>
+					<li class="ui-widget-content">Pink Floyd</li>
+					<li class="ui-widget-content">Queens of the Stone Age</li>
+					<li class="ui-widget-content">Radiohead</li>
+					<li class="ui-widget-content">Red Hot Chili Peppers</li>
+					<li class="ui-widget-content">The Rolling Stones</li>
+					<li class="ui-widget-content">Smashing Pumpkins</li>
+					<li class="ui-widget-content">Stone Temple Pilots</li>
+					<li class="ui-widget-content">Tool</li>
+					<li class="ui-widget-content">The Tragically Hip</li>
 				</ol>
 			</div>
 		</div>
+		
+		<div class="col-md-5">
+				<div class="artistTitle">
+					Soundgarden
+					<span class="right">
+					<button type="button" class="btn btn-success btn-xs">Add to Queue</button>
+					</span>
+				</div>
+				<div class="scroll-pane songs">
+
+					<!-- superunknown -->
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="../img/soundgarden-superunknown.jpg" alt=""></a>					
+						<div class="media-body">
+						<span class="right">1994</span>
+						<h4 class="media-heading">
+						<em>Superunknown</em>
+						</h4>
+					
+						<ol id="selectSongs">
+							<li class="ui-widget-content">1. Let Me Drown</li>
+							<li class="ui-widget-content">2. My Wave</li>
+							<li class="ui-widget-content">3. Fell on Black Days</li>
+							<li class="ui-widget-content">4. Mailman</li>
+							<li class="ui-widget-content">5. Superunknown</li>
+							<li class="ui-widget-content">6. Head Down</li>
+							<li class="ui-widget-content">7. Black Hole Sun</li>
+							<li class="ui-widget-content">8. Spoonman</li>
+							<li class="ui-widget-content">9. Limo Wreck</li>
+							<li class="ui-widget-content">10. The Day I Tried To Live</li>
+							<li class="ui-widget-content">11. Kickstand</li>
+							<li class="ui-widget-content">12. Fresh Tendrils</li>
+							<li class="ui-widget-content">13. 4th of July</li>
+							<li class="ui-widget-content">14. Half</li>
+							<li class="ui-widget-content">15. Like Suicide</li>
+						</ol>
+						</div>
+					</div>
+				
+				
+				</div>
+		</div>
+		
 	</div>
+	</div><!-- end song selection container -->
 		
 
 	
