@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title></title>
-
+		<title>Rock</title>	
+		
 	<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	
+		
 	</head>
 	
 	<body>
@@ -69,7 +69,7 @@
 								</div>
 							</div>
 								
-							<div class="playerControls">
+							<div class="playerControls" id="playerControls">
 								<div id="volumeSlider"></div>
 								<div class="right">
 									<a class="controlButton" href="#" onclick="volumeClick()">
@@ -262,10 +262,7 @@
 				</div>
 			</div>
 	</div>
-		
-		
 	
-		  
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -305,12 +302,7 @@
 			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9])+$/;
 			return regex.test(email);
 		}
-					
-		/* popup player script */
-		function openPlayer(){
-			window.open("player.html", "Player", "width=600, height=800");
-			event.preventDefault();
-		}
+		
 	</script>
 	</body>
 </html>

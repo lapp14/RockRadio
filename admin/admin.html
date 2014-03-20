@@ -13,8 +13,7 @@
 	
 	</head>
 	
-	<body>		
-	
+	<body>	
 	<nav class="navbar navbar-inverse noMargin" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -22,13 +21,20 @@
 			</div>
 			
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Administrative Options</a></li>
+				<li><a href="#" id="adminOptionLink">Administrative Options</a></li>
 				<li><a href="#">Manage Library</a></li>
 				<li><a href="#">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
 
+	<div id="adminOptionDialog" title="Administrative Options" style="display:none">
+		<label>
+			<input type="checkbox" id="autoQueueRequests">
+			Auto-Queue User Requests
+		</label>
+	</div>
+	
 	<!-- song selection container -->
 	<div class="container">
 	<div class="row">
@@ -183,8 +189,6 @@
 		
 	</div>
 	</div><!-- end song selection container -->
-		
-
 	
 	<script src="../js/jquery-1.11.0.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -195,7 +199,29 @@
 	<!-- the jScrollPane script -->
 	<script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
 	
-	<script>	
+	<script>
+	var autoQueueRequests = false;
+	
+	$(function() {
+		$( "#adminOptionDialog" ).dialog({
+			autoOpen: false,
+			show: {
+				effect: "blind",
+				duration: 1000
+			},
+			hide: {
+				effect: "blind",
+				duration: 1000
+			}
+		});
+
+		$( "#adminOptionLink" ).click(function() {
+			$( "#autoQueueRequests" ).checked(autoQueueRequests);
+			$( "#adminOptionDialog" ).dialog( "open" )
+			
+		});
+	});
+  
 	$(function selectable() {
 		$( "#selectArtist" ).selectable();
 		$( "#selectSongs" ).selectable();

@@ -51,3 +51,9 @@ function changeVolumeGraphic(){
 		$('#speakerHigh').hide();			
 	}
 }
+			
+/* popup player script */
+function openPlayer(){
+	window.open("player.html", "Player", "width=600, height=800");
+	event.preventDefault();
+}
