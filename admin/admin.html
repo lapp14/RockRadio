@@ -13,12 +13,93 @@
 	
 	</head>
 	
-	<body>			
+	<body>		
+	
+	<nav class="navbar navbar-inverse noMargin" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Rock</a>
+			</div>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Administrative Options</a></li>
+				<li><a href="#">Manage Library</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+
 	<!-- song selection container -->
 	<div class="container">
 	<div class="row">
+		<div class="col-md-4 noPadding" >
+			<div class="row" style="padding:0px;">
+				<div class="col-md-12 noMargin">
+					<div class="title">
+						Now Playing...
+					</div>
+					<div class="nowPlaying">
+						<a class="pull-left"><img class="prev-played" src="../img/soundgarden-badmotorfinger.jpg" alt=""></a>	
+						<h3 class="media-heading playerSong">
+							Soundgarden - <em>Room a Thousand Years Wide</em>
+						</h3>
+						<span class="playerAlbum">
+							Badmotorfinger
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="title">
+					Queue
+					<span class="right">
+						<button type="button" class="btn btn-danger btn-xs">Remove Song</button>
+					</span>
+				</div>
+				<div class="scroll-pane">
+					<ol id="queueSelect">
+						<li class="ui-widget-content">1. Led Zeppelin - <em>When The Levee Breaks</em></li>
+						<li class="ui-widget-content">2. Matthew Good Band - <em>Indestructable</em></li>
+						<li class="ui-widget-content">3. Jimi Hendrix - <em>Wind Cries Mary</em></li>
+						<li class="ui-widget-content">4. Pink Floyd - <em>Sorrow</em></li>
+						<li class="ui-widget-content">5. Radiohead - <em>Jigsaw Falling Into Place</em></li>
+						<li class="ui-widget-content">6. Pearl Jam - <em>Off He Goes</em></li>
+						<li class="ui-widget-content">7. Jethro Tull - <em>With You There To Help Me</em></li>
+						<li class="ui-widget-content">8. Genesis - <em>Squonk</em></li>
+						<li class="ui-widget-content">9. Joe Satriani - <em>Searching</em></li>
+						<li class="ui-widget-content">10. The Black Keys - <em>When The Lights Go Out</em></li>
+						<li class="ui-widget-content">11. The Tragically Hip - <em>Looking For a Place to Happen</em></li>
+					</ol>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="title">
+					Requests
+					<span class="right">
+						<button type="button" class="btn btn-success btn-xs">Add to Queue</button>
+						<button type="button" class="btn btn-danger btn-xs">Remove Song</button>
+					</span>
+				</div>
+				<div class="scroll-pane">
+					<ol id="requestSelect">
+						<li class="ui-widget-content">1. Led Zeppelin - <em>When The Levee Breaks</em></li>
+						<li class="ui-widget-content">2. Matthew Good Band - <em>Indestructable</em></li>
+						<li class="ui-widget-content">3. Jimi Hendrix - <em>Wind Cries Mary</em></li>
+						<li class="ui-widget-content">4. Pink Floyd - <em>Sorrow</em></li>
+						<li class="ui-widget-content">5. Radiohead - <em>Jigsaw Falling Into Place</em></li>
+						<li class="ui-widget-content">6. Pearl Jam - <em>Off He Goes</em></li>
+						<li class="ui-widget-content">7. Jethro Tull - <em>With You There To Help Me</em></li>
+						<li class="ui-widget-content">8. Genesis - <em>Squonk</em></li>
+					</ol>
+				</div>
+			</div>
+			
+		</div>
+	
 		<div class="col-md-3">
-			<div class="artistTitle">
+			<div class="title">
 				Artists
 			</div>
 			<div class="scroll-pane">
@@ -58,46 +139,46 @@
 			</div>
 		</div>
 		
-		<div class="col-md-5">
-				<div class="artistTitle">
-					Soundgarden
-					<span class="right">
-					<button type="button" class="btn btn-success btn-xs">Add to Queue</button>
-					</span>
-				</div>
-				<div class="scroll-pane songs">
+		<div class="col-md-5 noPadding">
+			<div class="title albumTitle">
+				Soundgarden
+				<span class="right">
+				<button type="button" class="btn btn-success btn-xs">Add to Queue</button>
+				</span>
+			</div>
+			<div class="scroll-pane songs">
 
-					<!-- superunknown -->
-					<div class="media">				
-						<a class="pull-left"><img class="prev-played" src="../img/soundgarden-superunknown.jpg" alt=""></a>					
-						<div class="media-body">
-						<span class="right">1994</span>
-						<h4 class="media-heading">
-						<em>Superunknown</em>
-						</h4>
-					
-						<ol id="selectSongs">
-							<li class="ui-widget-content">1. Let Me Drown</li>
-							<li class="ui-widget-content">2. My Wave</li>
-							<li class="ui-widget-content">3. Fell on Black Days</li>
-							<li class="ui-widget-content">4. Mailman</li>
-							<li class="ui-widget-content">5. Superunknown</li>
-							<li class="ui-widget-content">6. Head Down</li>
-							<li class="ui-widget-content">7. Black Hole Sun</li>
-							<li class="ui-widget-content">8. Spoonman</li>
-							<li class="ui-widget-content">9. Limo Wreck</li>
-							<li class="ui-widget-content">10. The Day I Tried To Live</li>
-							<li class="ui-widget-content">11. Kickstand</li>
-							<li class="ui-widget-content">12. Fresh Tendrils</li>
-							<li class="ui-widget-content">13. 4th of July</li>
-							<li class="ui-widget-content">14. Half</li>
-							<li class="ui-widget-content">15. Like Suicide</li>
-						</ol>
-						</div>
+				<!-- superunknown -->
+				<div class="media">				
+					<a class="pull-left"><img class="prev-played" src="../img/soundgarden-superunknown.jpg" alt=""></a>					
+					<div class="media-body">
+					<span class="right">1994</span>
+					<h4 class="media-heading">
+					<em>Superunknown</em>
+					</h4>
+				
+					<ol id="selectSongs">
+						<li class="ui-widget-content">1. Let Me Drown</li>
+						<li class="ui-widget-content">2. My Wave</li>
+						<li class="ui-widget-content">3. Fell on Black Days</li>
+						<li class="ui-widget-content">4. Mailman</li>
+						<li class="ui-widget-content">5. Superunknown</li>
+						<li class="ui-widget-content">6. Head Down</li>
+						<li class="ui-widget-content">7. Black Hole Sun</li>
+						<li class="ui-widget-content">8. Spoonman</li>
+						<li class="ui-widget-content">9. Limo Wreck</li>
+						<li class="ui-widget-content">10. The Day I Tried To Live</li>
+						<li class="ui-widget-content">11. Kickstand</li>
+						<li class="ui-widget-content">12. Fresh Tendrils</li>
+						<li class="ui-widget-content">13. 4th of July</li>
+						<li class="ui-widget-content">14. Half</li>
+						<li class="ui-widget-content">15. Like Suicide</li>
+					</ol>
 					</div>
-				
-				
 				</div>
+			
+			
+			</div>
 		</div>
 		
 	</div>
@@ -115,23 +196,17 @@
 	<script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
 	
 	<script>	
-	$(function selectArtist() {
+	$(function selectable() {
 		$( "#selectArtist" ).selectable();
-	});
-	
-	$(function selectSongs() {
 		$( "#selectSongs" ).selectable();
+		$( "#queueSelect" ).selectable();
+		$( "#requestSelect" ).selectable();
+	});
+		
+	$(function scrollPane()
+	{
 	});
 	
-	$(function()
-	{
-		$('.scroll-pane-artist').jScrollPane();
-	});
-	
-	$(function()
-	{
-		$('.scroll-pane-songs').jScrollPane();
-	});
 	</script> 
 
 	

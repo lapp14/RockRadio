@@ -8,18 +8,33 @@
 	padding: 5px;
 }*/
 
-.artistTitle{
+.title{
 	background: #555;
 	border-bottom: 1px solid black;
-	margin-bottom: 10px;
 	padding: 10px;
 }
-/*
+
+.albumTitle{
+	margin-bottom: 10px;
+}
+
+.nowPlaying{
+	padding: 10px;
+}
+
+.prev-played{
+	margin-right: 10px;
+}
+
+
 .songSelectionContainer{
 	border: 1px solid black;
-	width: 600px;
-	float: right;
-}*/
+}
+
+a.menuItems{
+	color: #f0f;
+}
+
 /*
 .songSelection{
 	width: 875px;
@@ -58,31 +73,44 @@ h4.media-heading{
 }
 
 #selectArtist .ui-selecting,
-#selectSongs .ui-selecting { 
+#selectSongs .ui-selecting ,
+#queueSelect .ui-selecting ,
+#requestSelect .ui-selecting  { 
 	background: #FECA40; 
 }
 
 #selectArtist .ui-selected,
-#selectSongs .ui-selected { 
+#selectSongs .ui-selected ,
+#queueSelect .ui-selected ,
+#requestSelect .ui-selected { 
 	background: #F39814; 
 	color: white; 
 }
 
 #selectArtist,
-#selectSongs  { 
+#selectSongs { 
 	list-style-type: none; 
 	margin: 0; 
 	padding: 0; 
 	height: 800px;
 }
 
+#queueSelect,
+#requestSelect{
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	height: 288px;
+	background: #fff;
+}
+
 #selectArtist li,
-#selectSongs  li{ 
-	margin: 3px; 
+#selectSongs  li,
+#queueSelect li,
+#requestSelect li{ 
 	padding: 0.4em; 
 	font-size: 1.4em; 
 	height: 30px; 
-	width:98%;
 }
 
 .horizontal-only
