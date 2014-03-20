@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+
+	<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+			<div class="container" style="padding-top:10px">
+				<p>
+					<a href="#">
+						<img src="img/ad_player.gif"/>
+					</a>
+				</p>
+			</div>
+		</nav>
+	
+		<!-- main content -->
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Current Radio Show</h3>
+					90s Grunge Hour with <a href="#">Dan Lapp</a>
+					<span class="right">Thursdays at <em>2:00 pm</em></span>
+				
+			</div>
+			<div class="panel-body">
+				
+				<div class="player">
+					<div class="playerNowPlaying">	
+						<div class="capsule">Now Playing...		</div>
+						<div class="containerPadded">
+							<div class="media">
+								<a class="pull-left"><img class="prev-played" src="img/soundgarden-badmotorfinger.jpg" alt=""></a>					
+								<div class="media-body">
+									<h4 class="media-heading playerSong">
+										Soundgarden - <em>Room a Thousand Years Wide</em>
+									</h4>
+									<span class="playerAlbum">
+										Badmotorfinger
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+						
+					<div class="playerControls">
+						<div id="volumeSlider"></div>
+						<div class="right">
+							<a class="controlButton" href="#" onclick="volumeClick()">
+								<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
+								<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
+								<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+								&nbsp;
+							</a>				
+						</div>
+						
+						<div class="">
+							<a class="controlButton" href="#" onclick="togglePlayPause()">
+								<span id="playButton" class="glyphicon glyphicon-play"></span>
+								<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
+							</a>
+							
+							<img src="img/soundbars.gif" class="soundbars" id="soundbars" style="display:none" alt=""/>
+							<img src="img/soundbars_static.gif" class="soundbars" id="soundbarsStatic" alt=""/>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- end player -->
+						
+			<!-- prev played -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Recently Played</h3>
+				</div>
+				<div class="panel-body">
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/soundgarden-superunknown.jpg" alt=""></a>					
+						<div class="media-body">
+							<div class="capsule">2:26 pm</div>
+							<h4 class="media-heading">
+							Soundgarden - <em>4th of July</em>
+							</h4>
+							Superunknown
+						</div>
+					</div>
+					
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/alice_in_chains-mtv_unplugged.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">2:21 pm</div>
+						<h4 class="media-heading">
+						Alice in Chains - <em>Brother</em>
+						</h4>
+						MTV Unplugged
+						</div>
+					</div>	
+			
+
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/stone_temple_pilots-core.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">2:17 pm</div>
+						<h4 class="media-heading">
+						Stone Temple Pilots - <em>Wicked Garden</em>
+						</h4>
+						Core
+						</div>
+					</div>	
+					
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/pearl_jam-ten.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">2:12 pm</div>
+						<h4 class="media-heading">
+						Pearl Jam - <em>Deep</em>
+						</h4>
+						Core
+						</div>
+					</div>	
+					
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/pearl_jam-live_on_two_legs.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">2:06 pm</div>
+						<h4 class="media-heading">
+						Pearl Jam - <em>Cordury</em>
+						</h4>
+						Live on Two Legs
+						</div>
+					</div>	
+					
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/screaming_trees-dust.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">2:00 pm</div>
+						<h4 class="media-heading">
+						Screaming Trees - <em>Dying Days</em>
+						</h4>
+						Dust
+						</div>
+					</div>	
+					
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/pink_floyd-wish_you_were_here.jpg" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">1:47 pm</div>
+						<h4 class="media-heading">
+						Pink Floyd - <em>Shine On You Crazy Diamond(Parts I-V)</em>
+						</h4>
+						Wish You Were Here
+						</div>
+					</div>	
+					
+					<div class="media">
+						<a class="pull-left"><img class="prev-played" src="img/arctic_monkeys-am.png" alt=""></a>					
+						<div class="media-body">
+						<div class="capsule">1:42 pm</div>
+						<h4 class="media-heading">
+						Arctic Monkeys - <em>Fireside</em>
+						</h4>
+						AM
+						</div>
+					</div>	
+				</div>
+			</div>
+			
+			<br/>&nbsp;
+			<br/>&nbsp;
+			<br/>&nbsp;
+			<br/>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/player.js"></script>
+	</body>
+</html>

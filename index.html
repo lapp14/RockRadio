@@ -114,8 +114,13 @@
 											<button type="button" onClick="submitSongRequest()" class="btn btn-margin btn-warning">Submit</button>
 										</div>
 										<p>
-											<div id="songSubmitSuccess" class="alert alert-success"  style="display:none">Song submitted successfully!</div>
-											<div id="songSubmitFailed" class="alert alert-danger" style="display:none">asd</div>
+											<div id="songSubmitSuccess" class="alert alert-dismissable alert-success"  style="display:none">
+												<button type="button" class="close" data-dismiss="alert">×</button>
+												Song submitted successfully!
+											</div>
+											<div id="songSubmitFailed" class="alert alert-dismissable alert-danger" style="display:none">
+												asd
+											</div>
 										</p>
 										
 									</fieldset>
@@ -123,12 +128,33 @@
 							</div>
 							
 							<div class="col-md-6">
-							asd
+								<form class="form-horizontal">
+									<fieldset>
+										<legend>Please Donate</legend>
+											<p>Keeping our station up and running, and free of commercials isn't cheap.
+											If you like what we are doing here, please consider donating. Even a few dollars is a big
+											help. Thank you and enjoy the rock!
+											</p>
+											<br/>
+											<p class="center">
+											<a href="#">
+												<img src="img/paypal.gif" alt="Donate with Paypal"/>
+											</a>
+											</p>
+									</fieldset>
+								</form>
 							</div>
 							
-							
-							
-							
+							<p>
+								<a href="#">
+									<img src="img/ad_main.gif"/>
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="img/ad_main.gif"/>
+								</a>
+							</p>
 						</div>
 						
 						
@@ -143,6 +169,51 @@
 						<h3 class="panel-title">Recently Played</h3>
 					</div>
 					<div class="panel-body">
+						<div class="media">				
+							<a class="pull-left"><img class="prev-played" src="img/soundgarden-superunknown.jpg" alt=""></a>					
+							<div class="media-body">
+								<div class="capsule">2:26 pm</div>
+								<h4 class="media-heading">
+								Soundgarden - <em>4th of July</em>
+								</h4>
+								Superunknown
+							</div>
+						</div>
+						
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/alice_in_chains-mtv_unplugged.jpg" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule">2:21 pm</div>
+							<h4 class="media-heading">
+							Alice in Chains - <em>Brother</em>
+							</h4>
+							MTV Unplugged
+							</div>
+						</div>	
+				
+
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/stone_temple_pilots-core.jpg" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule">2:17 pm</div>
+							<h4 class="media-heading">
+							Stone Temple Pilots - <em>Wicked Garden</em>
+							</h4>
+							Core
+							</div>
+						</div>	
+						
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/pearl_jam-ten.jpg" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule">2:12 pm</div>
+							<h4 class="media-heading">
+							Pearl Jam - <em>Deep</em>
+							</h4>
+							Core
+							</div>
+						</div>	
+						
 						<div class="media">
 							<a class="pull-left"><img class="prev-played" src="img/pearl_jam-live_on_two_legs.jpg" alt=""></a>					
 							<div class="media-body">
@@ -151,6 +222,39 @@
 							Pearl Jam - <em>Cordury</em>
 							</h4>
 							Live on Two Legs
+							</div>
+						</div>	
+						
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/screaming_trees-dust.jpg" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule">2:00 pm</div>
+							<h4 class="media-heading">
+							Screaming Trees - <em>Dying Days</em>
+							</h4>
+							Dust
+							</div>
+						</div>	
+						
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/pink_floyd-wish_you_were_here.jpg" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule">1:47 pm</div>
+							<h4 class="media-heading">
+							Pink Floyd - <em>Shine On You Crazy Diamond(Parts I-V)</em>
+							</h4>
+							Wish You Were Here
+							</div>
+						</div>	
+						
+						<div class="media">
+							<a class="pull-left"><img class="prev-played" src="img/arctic_monkeys-am.png" alt=""></a>					
+							<div class="media-body">
+							<div class="capsule">1:42 pm</div>
+							<h4 class="media-heading">
+							Arctic Monkeys - <em>Fireside</em>
+							</h4>
+							AM
 							</div>
 						</div>	
 					</div>
@@ -164,62 +268,9 @@
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/player.js"></script>
 	
 	<script type="text/javascript">
-		/* Player control scripts */		
-		var volume = 50;
-		var prevVolume = 0;
-		var isPlaying = false;
-		
-		$(function() {
-			$('#volumeSlider').slider({range: "min", value: 50, min: 0, max: 100,
-				slide: function( event, ui ){
-					volume = $('#volumeSlider').slider("option", "value");
-					changeVolumeGraphic();
-				},
-				
-				change: function(event, ui) {
-					changeVolumeGraphic();
-				}
-			});
-		});
-		
-		function togglePlayPause(){		
-			$('#soundbars').toggle();
-			$('#soundbarsStatic').toggle();
-			$('#playButton').toggle();
-			$('#pauseButton').toggle();
-		}
-		
-		function volumeClick(){
-			if(volume == 0){
-				volume = prevVolume;
-				prevVolume = 0;
-			}else{
-				prevVolume = volume;
-				volume = 0;
-			}
-			
-			//set slider to current volume, and update graphic
-			$('#volumeSlider').slider("option", "value", volume);
-		}
-		
-		function changeVolumeGraphic(){
-			if(volume == 0){
-				$('#speakerMute').show();
-				$('#speakerLow').hide();
-				$('#speakerHigh').hide();
-			}else if(volume > 50){
-				$('#speakerHigh').show();
-				$('#speakerMute').hide();
-				$('#speakerLow').hide();
-			}else{
-				$('#speakerLow').show();
-				$('#speakerMute').hide();
-				$('#speakerHigh').hide();			
-			}
-		}
-		
 		/* called to validate song request form */
 		function submitSongRequest(){
 			$('#songSubmitFailed').hide();
@@ -260,6 +311,5 @@
 			event.preventDefault();
 		}
 	</script>
-	
 	</body>
 </html>

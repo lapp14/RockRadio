@@ -15,6 +15,10 @@ a, a:hover{
 	
 }
 
+legend{
+	margin-bottom:5px;
+}
+
 .row{
 	padding: 10px;
 }
@@ -25,10 +29,6 @@ a, a:hover{
 
 .btn-margin{
 	margin: 10px;
-}
-
-.alert{
-	padding: 5px;
 }
 
 /* Player controls */
@@ -110,8 +110,11 @@ a:hover.noHover{
 	float: right;
 }
 
-/* jquery ui media styles */
+.center{
+	text-align: center;
+}
 
+/* jquery ui media styles */
 .prev-played{
 	border: 1px solid black;
 	height: 100px;
