@@ -22,7 +22,7 @@
 			
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#" id="adminOptionLink">Administrative Options</a></li>
-				<li><a href="#">Manage Library</a></li>
+				<li><a href="#" id="manageLibraryLink">Manage Library</a></li>
 				<li><a href="#">Logout</a></li>
 			</ul>
 		</div>
@@ -33,6 +33,21 @@
 			<input type="checkbox" id="autoQueueRequests">
 			Auto-Queue User Requests
 		</label>
+		
+		<label>
+			<input type="checkbox" id="autoPickSongs">
+			Auto-Pick Songs when Queue is Empty
+		</label>
+	</div>
+	
+	<div id="manageLibraryDialog" title="Manage Library" style="display:none">
+		<button id="deleteSongButton" onClick="deleteSongFromLibrary()">Delete Song From Library</button>
+	</div>
+	
+	<div id="deleteSongDialog" title="Are You Sure?" style="display:none">
+		This will permanently delete the selected song(s) from your library. Are you sure?
+		<button id="deleteSongDialogYes">Yes</button>
+		<button id="deleteSongDialogNo">No</button>
 	</div>
 	
 	<!-- song selection container -->
@@ -191,8 +206,8 @@
 	</div><!-- end song selection container -->
 	
 	<script src="../js/jquery-1.11.0.min.js"></script>
-	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	
 	<!-- the mousewheel plugin -->
 	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
@@ -201,25 +216,93 @@
 	
 	<script>
 	var autoQueueRequests = false;
+	var autoPickSongs = true;
+	
+	$(document).ready(function (){
+		$( "#autoQueueRequests" ).prop("checked", autoQueueRequests);
+		$( "#autoPickSongs" ).prop("checked", autoPickSongs);
+	});
 	
 	$(function() {
 		$( "#adminOptionDialog" ).dialog({
 			autoOpen: false,
 			show: {
 				effect: "blind",
-				duration: 1000
+				duration: 100
 			},
 			hide: {
 				effect: "blind",
-				duration: 1000
+				duration: 100
 			}
 		});
 
 		$( "#adminOptionLink" ).click(function() {
-			$( "#autoQueueRequests" ).checked(autoQueueRequests);
 			$( "#adminOptionDialog" ).dialog( "open" )
 			
 		});
+	});
+	
+	$(function() {
+		$( "#manageLibraryDialog" ).dialog({
+			autoOpen: false,
+			show: {
+				effect: "blind",
+				duration: 100
+			},
+			hide: {
+				effect: "blind",
+				duration: 100
+			}
+		});
+
+		$( "#manageLibraryLink" ).click(function() {
+			$( "#manageLibraryDialog" ).dialog( "open" )
+			
+		});
+	});
+		
+	$( "#autoQueueRequests" ).click(function (){
+		if(autoQueueRequests == false)
+			autoQueueRequests = true;
+		else
+			autoQueueRequests = false;
+	});
+	
+	$( "#autoPickSongs" ).click(function (){
+		if(autoPickSongs == false)
+			autoPickSongs = true;
+		else
+			autoPickSongs = false;
+	});
+	
+	$(function deleteSongFromLibrary() {
+		//$( "#selectSongs" ).
+		$(function() {
+			$( "#deleteSongDialog" ).dialog({
+				autoOpen: false,
+				show: {
+					effect: "blind",
+					duration: 100
+				},
+				hide: {
+					effect: "blind",
+					duration: 100
+				}
+			});
+
+			$( "#deleteSongButton" ).click(function() {
+				$( "#deleteSongDialog" ).dialog( "open" )
+				
+			});
+		});
+	});
+	
+	$( "#deleteSongDialogYes" ).click(function() {
+		$( "#deleteSongDialog" ).dialog( "close" )
+	});
+  
+	$( "#deleteSongDialogNo" ).click(function() {
+		$( "#deleteSongDialog" ).dialog( "close" )
 	});
   
 	$(function selectable() {
@@ -228,11 +311,6 @@
 		$( "#queueSelect" ).selectable();
 		$( "#requestSelect" ).selectable();
 	});
-		
-	$(function scrollPane()
-	{
-	});
-	
 	</script> 
 
 	
