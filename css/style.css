@@ -1,22 +1,36 @@
+/* main elements */
 body{
+	font-family: 'Roboto', sans-serif;
 }
-
-
 
 a, a:hover{
 	color: #000;
 }
 
+legend{
+	margin-bottom:5px;
+}
+
+/* div styles */
 .capsule{
 	background: #000;
 	font-size: 0.8em;
 	padding: 3px;
 	margin-bottom: 10px;
-	
 }
 
-legend{
-	margin-bottom:5px;
+.panel-title{
+	font-size: 1.2em;
+}
+
+.panel{
+	padding: 0 0;
+	border: 1px solid black;
+}
+
+div.containerPadded{
+	padding: 5px;
+	padding-top: 0px;
 }
 
 .row{
@@ -27,9 +41,18 @@ legend{
 	margin: 2px;
 }
 
+
+/* button styles */
 .btn-margin{
 	margin: 10px;
 }
+
+.controlButton, 
+.controlButton:hover{
+	color: #000;
+	text-decoration: none;
+}
+
 
 /* Player controls */
 .player{
@@ -57,36 +80,18 @@ legend{
 	float: right;
 }
 
-.controlButton, 
-.controlButton:hover{
-	color: #000;
-	text-decoration: none;
+
+/* image styles */
+.streamIcon{
+	margin: 10px 2px 10px 2px;
+	width: 30px;
+	height: 30px;
 }
 
 img.soundbars{
 	margin-left: 30px;
 	width: 100px;
 	height: 25px;
-}
-
-.panel-title{
-	font-size: 1.2em;
-}
-
-.panel{
-	padding: 0 0;
-	border: 1px solid black;
-}
-
-div.containerPadded{
-	padding: 5px;
-	padding-top: 0px;
-}
-
-.streamIcon{
-	margin: 10px 2px 10px 2px;
-	width: 30px;
-	height: 30px;
 }
 
 /* positioning classes */

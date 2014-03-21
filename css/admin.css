@@ -1,66 +1,32 @@
-.songSelection{
-	width: 750px;
+/* div sizes and layout */ 
+.albumTitle{
+	margin-bottom: 10px;
 }
-/*
-.artistContainer{
-	border: 1px solid black;
-	width:252px;
-	padding: 5px;
-}*/
 
 .title{
 	background: #555;
-	border-bottom: 1px solid black;
 	padding: 10px;
-}
-
-.albumTitle{
-	margin-bottom: 10px;
 }
 
 .nowPlaying{
 	padding: 10px;
 }
 
+.songSelection{
+	width: 750px;
+}
+
 .prev-played{
 	margin-right: 10px;
 }
 
-
-.songSelectionContainer{
-	border: 1px solid black;
-}
-
-a.menuItems{
-	color: #f0f;
-}
-
-/*
-.songSelection{
-	width: 875px;
-	border: 1px solid black;
-}*/
-/*
-.artist{
-	width: 250px;
-	height: 800px;
-}*/
-/*
-.songs{
-		width: 400px;
-		height: 500px;
-		margin-left: 100px;
-}*/
-
-.scroll-pane{
-	font-size: 0.6em;
-	font-family: Arial, sans-serif;
-	overflow: auto;
-}
-
 .right{
 	float: right;
+}
 
+/* links, headers */
+a.menuItems{
+	color: #f0f;
 }
 
 h4.media-heading{
@@ -68,6 +34,7 @@ h4.media-heading{
 	padding-bottom: 10px;
 }
 
+/* jquery ui selectable styles */
 #feedback { 
 	font-size: 1.4em; 
 }
@@ -113,8 +80,15 @@ h4.media-heading{
 	height: 30px; 
 }
 
+/* jscrollpane necissary styles */
 .horizontal-only
 {
 	height: auto;
 	max-height: 200px;
+}
+
+.scroll-pane{
+	font-size: 0.6em;
+	font-family: Arial, sans-serif;
+	overflow: auto;
 }

@@ -1,15 +1,82 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	
+		<title>Rock: DJ Login</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/admin.css">
+		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	
 	<body>
+	<nav class="navbar navbar-inverse noMargin" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Rock</a>
+			</div>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../index.html">Main Site</a></li>
+			</ul>
+		</div>
+	</nav>
 	
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-4">
+			<form class="form-horizontal">
+				<fieldset>
+					<legend>DJ Login</legend>
+					
+						<input type="text" class="form-control" id="user" placeholder="Username"/>
+						<input type="password" class="form-control" id="password" placeholder="Password"/>
+						
+						<div class="btn-group">
+							<button type="button" onClick="login()" class="btn btn-margin btn-warning">Login</button>
+						</div>
+						
+						<p>
+							<div id="loginFailed" class="alert alert-dismissable alert-danger" style="display:none">
+								asd
+							</div>
+						</p>
+
+				</fieldset>
+			</form>
+			
+			<p>
+			Username: user
+			</p>
+			
+			<p>
+			Password: asd			
+			</p>
+			
+		</div>
+		</div>
+	</div>
+	
+	<script src="../js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		function login(){
+			var username = $( '#user' ).val().toLowerCase();
+			var password = $( '#password' ).val();
+		
+			if (username == "") {	
+				$('#loginFailed').html("Enter Username");
+				$('#loginFailed').show();
+			} else if (username != "user") {	
+				$('#loginFailed').html("User Not Found");
+				$('#loginFailed').show();
+			} else if (password != "asd") {	
+				$('#loginFailed').html("Password Incorrect");
+				$('#loginFailed').show();
+			} else {
+				window.location.replace("admin.html");
+			}
+		}
+	</script>
 	</body>
 </html>	

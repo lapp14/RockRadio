@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title></title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-	<link type="text/css" href="../css/jscrollpane.css" rel="stylesheet" media="all" />
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../css/admin.css">
-	<link rel="stylesheet" href="../css/style.css">
+		<title>Rock: DJ Page</title>
+			
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Roboto' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<link type="text/css" href="../css/jscrollpane.css" rel="stylesheet" media="all" />
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/admin.css">
+		<link rel="stylesheet" href="../css/style.css">
 	
 	</head>
 	
@@ -23,7 +22,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#" id="adminOptionLink">Administrative Options</a></li>
 				<li><a href="#" id="manageLibraryLink">Manage Library</a></li>
-				<li><a href="#">Logout</a></li>
+				<li><a href="#" onClick="logout()">Logout</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -37,6 +36,14 @@
 		<label>
 			<input type="checkbox" id="autoPickSongs">
 			Auto-Pick Songs when Queue is Empty
+		</label>
+		
+		<label>
+			Prevent Repeats for 
+		</label>
+		<label>
+			<input type="text" size="2" id="preventRepeats">
+			Hours
 		</label>
 	</div>
 	
@@ -217,10 +224,12 @@
 	<script>
 	var autoQueueRequests = false;
 	var autoPickSongs = true;
+	var preventRepeats = 3;	
 	
 	$(document).ready(function (){
 		$( "#autoQueueRequests" ).prop("checked", autoQueueRequests);
 		$( "#autoPickSongs" ).prop("checked", autoPickSongs);
+		$( "#preventRepeats" ).val(preventRepeats);
 	});
 	
 	$(function() {
@@ -260,6 +269,10 @@
 			
 		});
 	});
+	
+	function logout(){
+		window.location.replace("index.html");
+	}
 		
 	$( "#autoQueueRequests" ).click(function (){
 		if(autoQueueRequests == false)
@@ -273,6 +286,12 @@
 			autoPickSongs = true;
 		else
 			autoPickSongs = false;
+	});
+	
+	$( "#preventRepeats" ).on('input', function (){
+		if($( "#preventRepeats" ).isNumeric()){
+			preventRepeats = $( "#preventRepeats" ).val();
+		}
 	});
 	
 	$(function deleteSongFromLibrary() {
