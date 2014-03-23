@@ -5,6 +5,7 @@
 		
 	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
+		<link type="text/css" href="../css/jscrollpane.css" rel="stylesheet" media="all" />
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 		
@@ -14,7 +15,7 @@
 	<div class="container">
 	
 		<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom:0px">
-			<a class="navbar-brand" href="#">Rock</a>
+			<a class="navbar-brand" href="index.html">Rock</a>
 			<div class="right">
 				<a class="noHover" href="#">
 					<img src="img/winamp.png" class="streamIcon" alt="Stream with Winamp"/>
@@ -30,141 +31,75 @@
 		</nav>
 		<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom:5px">
 			<ul class="nav navbar-nav right">
-				<li class="active"><a href="#">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="recentsongs.html">Recent Songs</a></li>
-				<li><a href="artists.html">Artists</a></li>
+				<li class="active"><a href="#">Artists</a></li>
 				<li><a href="shows.html">Radio Shows</a></li>
 				<li><a href="djs.html">DJs</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
 	
-		
 		<div class="row">
-			<!-- main content -->
+			<!-- prev played -->
 			<div class="containerPadded col-md-8">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Current Radio Show</h3>
-							90s Grunge Hour with <a href="#">Dan Lapp</a>
-							<span class="right">Thursdays at <em>2:00 pm</em></span>
+						<h3 class="panel-title">Artists We Play</h3>
 						
 					</div>
 					<div class="panel-body">
+						These are the artists and bands that we currently have in our database. If your song request does not
+						appear on this list, we won't be able to play until a DJ is online, and able to upload it to our
+						database. Our library is always expanding, so don't hesitate to ask for the songs that you want to
+						hear, from your favourite bands.
 						
-						<div class="player">
-							<div class="playerNowPlaying">	
-								<div class="capsule">Now Playing...		</div>
-								<div class="containerPadded">
-									<div class="media">
-										<a class="pull-left"><img class="prev-played" src="img/soundgarden-badmotorfinger.jpg" alt=""></a>					
-										<div class="media-body">
-											<h4 class="media-heading playerSong">
-												Soundgarden - <em>Room a Thousand Years Wide</em>
-											</h4>
-											<span class="playerAlbum">
-												Badmotorfinger
-											</span>
-										</div>
-									</div>
+						<div class=" artistPageScrollPane">
+							<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom:0px;">
+								<div class="form-group">
+									<input type="text" class="form-control artistSearch" placeholder="Search">
 								</div>
+							</nav>
+							<div class="scroll-pane">
+								<ol id="selectArtist">
+									<li class="ui-widget-content ">AC-DC</li>
+									<li class="ui-widget-content">Alan Parson's Project</li>
+									<li class="ui-widget-content">Alice in Chains</li>
+									<li class="ui-widget-content">Audioslave</li>
+									<li class="ui-widget-content">The Beatles</li>
+									<li class="ui-widget-content">The Black Keys</li>
+									<li class="ui-widget-content">Black Sabbath</li>
+									<li class="ui-widget-content">Cream</li>
+									<li class="ui-widget-content">Crosby, Stills, Nash & Young</li>
+									<li class="ui-widget-content">Dave Matthews Band</li>
+									<li class="ui-widget-content">Dire Straits</li>
+									<li class="ui-widget-content">Eric Clapton</li>
+									<li class="ui-widget-content">Genesis</li>
+									<li class="ui-widget-content">Incubus</li>
+									<li class="ui-widget-content">Jethro Tull</li>
+									<li class="ui-widget-content">Jimi Hendrix</li>
+									<li class="ui-widget-content">Joe Satriani</li>
+									<li class="ui-widget-content">Led Zeppelin</li>
+									<li class="ui-widget-content">Matthew Good Band</li>
+									<li class="ui-widget-content">Neil Young</li>
+									<li class="ui-widget-content">Ozzy Osbourne</li>
+									<li class="ui-widget-content">Pearl Jam</li>
+									<li class="ui-widget-content">Pink Floyd</li>
+									<li class="ui-widget-content">Queens of the Stone Age</li>
+									<li class="ui-widget-content">Radiohead</li>
+									<li class="ui-widget-content">Red Hot Chili Peppers</li>
+									<li class="ui-widget-content">The Rolling Stones</li>
+									<li class="ui-widget-content">Smashing Pumpkins</li>
+									<li class="ui-widget-content">Stone Temple Pilots</li>
+									<li class="ui-widget-content">Tool</li>
+									<li class="ui-widget-content">The Tragically Hip</li>
+								</ol>
 							</div>
-								
-							<div class="playerControls" id="playerControls">
-								<div id="volumeSlider"></div>
-								<div class="right">
-									<a class="controlButton" href="#" onclick="volumeClick()">
-										<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
-										<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
-										<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
-										&nbsp;
-									</a>				
-								</div>
-								
-								<div class="">
-									<a class="controlButton" href="#" onclick="togglePlayPause()">
-										<span id="playButton" class="glyphicon glyphicon-play"></span>
-										<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
-									</a>
-									
-									<img src="img/soundbars.gif" class="soundbars" id="soundbars" style="display:none" alt=""/>
-									<img src="img/soundbars_static.gif" class="soundbars" id="soundbarsStatic" alt=""/>
-								</div>
-							</div>
-							<button type="button" onClick="openPlayer()" class="btn btn-margin btn-xs btn-warning right">
-								Expand Player <span class="glyphicon glyphicon-resize-full"></span>
-							</button>
 						</div>
-						
-						<!-- end player -->
-						
-						
-						<div class="row" style="margin-top:40px">
-							<div class="col-md-6">
-								<form class="form-horizontal">
-									<fieldset>
-										<legend>Request a Song</legend>
-										<div class="col-lg-12">
-											<input type="text" class="form-control" id="submitArtist" placeholder="Artist"/>
-											<input type="text" class="form-control" id="submitSong" placeholder="Song"/>
-											<input type="text" class="form-control" id="submitAlbum" placeholder="Album (Optional)"/>
-											<input type="text" class="form-control" id="submitName" placeholder="Name"/>
-											<input type="text" class="form-control" id="submitEmail" placeholder="Email"/>
-										</div>
-										
-										<div class="btn-group">
-											<button type="button" onClick="submitSongRequest()" class="btn btn-margin btn-warning">Submit</button>
-										</div>
-										<p>
-											<div id="songSubmitSuccess" class="alert alert-dismissable alert-success"  style="display:none">
-												<button type="button" class="close" data-dismiss="alert">×</button>
-												Song submitted successfully!
-											</div>
-											<div id="songSubmitFailed" class="alert alert-dismissable alert-danger" style="display:none">
-												asd
-											</div>
-										</p>
-										
-									</fieldset>
-								</form>
-							</div>
-							
-							<div class="col-md-6">
-								<form class="form-horizontal">
-									<fieldset>
-										<legend>Please Donate</legend>
-											<p>Keeping our station up and running, and free of commercials isn't cheap.
-											If you like what we are doing here, please consider donating. Even a few dollars is a big
-											help. Thank you and enjoy the rock!
-											</p>
-											<br/>
-											<p class="center">
-											<a href="#">
-												<img src="img/paypal.gif" alt="Donate with Paypal"/>
-											</a>
-											</p>
-									</fieldset>
-								</form>
-							</div>
-							
-							<p>
-								<a href="#">
-									<img src="img/ad_main.gif" class="ad" alt=""/>
-								</a>
-							</p>
-							<p>
-								<a href="#">
-									<img src="img/ad_main.gif" class="ad" alt=""/>
-								</a>
-							</p>
-						</div>
-						
-						
 					</div>
 				</div>
 			</div>
-		
-			<!-- prev played -->
+			
 			<div class="containerPadded col-md-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
@@ -262,13 +197,21 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 	
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/player.js"></script>
-	<script src="js/request_song.js"></script>
 	
+	<!-- the mousewheel plugin -->
+	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+	<!-- the jScrollPane script -->
+	<script type="text/javascript" src="../js/jquery.jscrollpane.min.js"></script>
+	
+	<script>
+		$( "#selectArtist" ).selectable();
+	</script>
+
 	</body>
 </html>

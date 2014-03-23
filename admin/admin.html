@@ -48,20 +48,37 @@
 	</div>
 	
 	<div id="manageLibraryDialog" title="Manage Library" style="display:none">
-		<button id="deleteSongButton" onClick="deleteSongFromLibrary()">Delete Song From Library</button>
+		<button id="addSongButton" onClick="addSong()">Add Song</button>
+		<button id="deleteSongButton" onClick="deleteSongFromLibrary()">Delete Song(s)</button>
 	</div>
 	
 	<div id="deleteSongDialog" title="Are You Sure?" style="display:none">
+		<p>
 		This will permanently delete the selected song(s) from your library. Are you sure?
+		</p>
 		<button id="deleteSongDialogYes">Yes</button>
 		<button id="deleteSongDialogNo">No</button>
+	</div>
+	
+	<div id="addSongDialog" title="Add Song to Library" style="display:none">
+		<form>
+			<input type="text" placeholder="Artist"/>
+			<input type="text" placeholder="Song Name"/>
+			<input type="text" placeholder="Album"/>
+			<br/>
+			Song: <input type="file" id="songPath"/>
+			<br/>
+			Album Art:  <input type="file" id="albumArtPath "/>
+			<br/>
+		<button id="addSongButton">Upload Song</button>
+		</form>
 	</div>
 	
 	<!-- song selection container -->
 	<div class="container">
 	<div class="row">
 		<div class="col-md-4 noPadding" >
-			<div class="row" style="padding:0px;">
+			<div class="row" style="padding:0px;"> 
 				<div class="col-md-12 noMargin">
 					<div class="title">
 						Now Playing...
@@ -295,7 +312,6 @@
 	});
 	
 	$(function deleteSongFromLibrary() {
-		//$( "#selectSongs" ).
 		$(function() {
 			$( "#deleteSongDialog" ).dialog({
 				autoOpen: false,
@@ -316,12 +332,38 @@
 		});
 	});
 	
+	$(function addSong() {
+		$(function() {
+			$( "#addSongDialog" ).dialog({
+				autoOpen: false,
+				width: 300,
+				show: {
+					effect: "blind",
+					duration: 100,
+				},
+				hide: {
+					effect: "blind",
+					duration: 100
+				}
+			});
+
+			$( "#addSongButton" ).click(function() {
+				$( "#addSongDialog" ).dialog( "open" )
+				
+			});
+		});
+	});
+	
 	$( "#deleteSongDialogYes" ).click(function() {
 		$( "#deleteSongDialog" ).dialog( "close" )
 	});
   
 	$( "#deleteSongDialogNo" ).click(function() {
 		$( "#deleteSongDialog" ).dialog( "close" )
+	});
+	
+	$( "#addSongButton" ).click(function() {
+		$( "#addSongDialog" ).dialog( "close" )
 	});
   
 	$(function selectable() {

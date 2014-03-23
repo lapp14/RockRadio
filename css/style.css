@@ -46,6 +46,11 @@ div.containerPadded{
 	margin: 2px;
 }
 
+.artistPageScrollPane{
+	width: 450px;
+	margin: auto;
+	padding-top: 30px;
+}
 
 /* button styles */
 .btn-margin{
@@ -99,6 +104,10 @@ img.soundbars{
 	height: 25px;
 }
 
+img.ad{
+	border: 1px solid black;
+}
+
 /* positioning classes */
 a:hover.noHover{
 	text-decoration: none;
@@ -125,6 +134,12 @@ a:hover.noHover{
 }
 
 /* jquery ui media styles */
+.artistSearch{
+	width: 280px; 
+	margin-left: 25px;
+	margin: 10px;
+}
+
 .prev-played{
 	border: 1px solid black;
 	height: 100px;
@@ -133,4 +148,41 @@ a:hover.noHover{
 
 .media-heading{
 	font-size: 1.1em;
+}
+
+
+/* jscrollpane necissary styles */
+.horizontal-only
+{
+	height: auto;
+	max-height: 200px;
+}
+
+.scroll-pane{
+	font-size: 0.6em;
+	font-family: Arial, sans-serif;
+	overflow: auto;
+}
+
+/* jquery ui selectable styles */
+#selectArtist .ui-selecting{ 
+	background: #FECA40; 
+}
+
+#selectArtist .ui-selected{ 
+	background: #F39814; 
+	color: white; 
+}
+
+#selectArtist { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	height: 800px;
+}
+
+#selectArtist li{ 
+	padding: 0.4em; 
+	font-size: 1.4em; 
+	height: 30px; 
 }
