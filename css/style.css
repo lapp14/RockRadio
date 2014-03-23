@@ -133,6 +133,21 @@ a:hover.noHover{
 	text-align: center;
 }
 
+/* shows.html */
+.tabTitle{
+	font-size: 0.8em
+}
+
+.ui-tabs{
+	width: 650px;
+	margin: auto;
+}
+
+div.time{
+	color: #DF691A;
+	margin-bottom: 5px;
+}
+
 /* jquery ui media styles */
 .artistSearch{
 	width: 280px; 
