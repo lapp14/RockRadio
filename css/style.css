@@ -135,11 +135,12 @@ a:hover.noHover{
 
 /* shows.html */
 .tabTitle{
-	font-size: 0.8em
+	font-size: 0.65em;
+	padding-bottom: 20px;
 }
 
 .ui-tabs{
-	width: 650px;
+	width: 550px;
 	margin: auto;
 }
 
