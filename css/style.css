@@ -16,6 +16,10 @@ legend{
 	margin-bottom:5px;
 }
 
+h5{
+	text-decoration: underline;
+}
+
 /* div styles */
 .capsule{
 	background: #000;
@@ -136,7 +140,6 @@ a:hover.noHover{
 /* shows.html */
 .tabTitle{
 	font-size: 0.65em;
-	padding-bottom: 20px;
 }
 
 .ui-tabs{
@@ -154,6 +157,12 @@ div.time{
 	width: 280px; 
 	margin-left: 25px;
 	margin: 10px;
+}
+
+.djPhoto{
+	border: 1px solid black;
+	height: 160px;
+	width: 160px;
 }
 
 .prev-played{

@@ -5,7 +5,6 @@
 		
 	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
-	<link type="text/css" href="css/jscrollpane.css" rel="stylesheet" media="all" />
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 		
@@ -33,10 +32,10 @@
 			<ul class="nav navbar-nav right">
 				<li><a href="index.html">Home</a></li>
 				<li><a href="recentsongs.html">Recent Songs</a></li>
-				<li class="active"><a href="#">Artists</a></li>
+				<li><a href="artists.html">Artists</a></li>
 				<li><a href="shows.html">Radio Shows</a></li>
 				<li><a href="djs.html">DJs</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li class="active"><a href="#">Contact</a></li>
 			</ul>
 		</nav>
 	
@@ -45,65 +44,53 @@
 			<div class="containerPadded col-md-8">
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title">Artists We Play</h3>
-						
+						<h3 class="panel-title">Contact Us</h3>
 					</div>
+					
 					<div class="panel-body">
-						These are the artists and bands that we currently have in our database. If your song request does not
-						feature an artist on this list, we won't be able to play until a DJ is online, and able to upload it to our
-						database. Our library is always expanding, so don't hesitate to ask for the songs that you want to
-						hear, from your favourite bands.
+						<p>
+							Here at Rock Radio, we value our listener's comments. Feel free to send us a message with your thoughts,
+							comments, or suggestions. Enter a DJ name to send your message to their inbox.
+						</p>
 						
-						<div class=" artistPageScrollPane">
-							<nav class="navbar navbar-inverse" role="navigation" style="margin-bottom:0px;">
-								<div class="form-group">
-									<input type="text" class="form-control artistSearch" placeholder="Search">
+						<form class="form-horizontal">
+							<fieldset>
+								<div class="col-lg-12">
+									<textarea class="form-control" rows="6" id="message" placeholder="Message"></textarea>
+									<input type="text" class="form-control" id="subject" placeholder="Subject"/>
+									<input type="text" class="form-control" id="name" placeholder="Your Name"/>
+									<input type="text" class="form-control" id="dj" placeholder="DJ Name (Optional)"/>
+									<input type="text" class="form-control" id="email" placeholder="Email"/>
 								</div>
-							</nav>
-							<div class="scroll-pane">
-								<ol id="selectArtist">
-									<li class="ui-widget-content ">AC-DC</li>
-									<li class="ui-widget-content">Alan Parson's Project</li>
-									<li class="ui-widget-content">Alice in Chains</li>
-									<li class="ui-widget-content">Audioslave</li>
-									<li class="ui-widget-content">The Beatles</li>
-									<li class="ui-widget-content">The Black Keys</li>
-									<li class="ui-widget-content">Black Sabbath</li>
-									<li class="ui-widget-content">Cream</li>
-									<li class="ui-widget-content">Crosby, Stills, Nash & Young</li>
-									<li class="ui-widget-content">Dave Matthews Band</li>
-									<li class="ui-widget-content">Dire Straits</li>
-									<li class="ui-widget-content">Eric Clapton</li>
-									<li class="ui-widget-content">Genesis</li>
-									<li class="ui-widget-content">Incubus</li>
-									<li class="ui-widget-content">Jethro Tull</li>
-									<li class="ui-widget-content">Jimi Hendrix</li>
-									<li class="ui-widget-content">Joe Satriani</li>
-									<li class="ui-widget-content">Led Zeppelin</li>
-									<li class="ui-widget-content">Matthew Good Band</li>
-									<li class="ui-widget-content">Neil Young</li>
-									<li class="ui-widget-content">Ozzy Osbourne</li>
-									<li class="ui-widget-content">Pearl Jam</li>
-									<li class="ui-widget-content">Pink Floyd</li>
-									<li class="ui-widget-content">Queens of the Stone Age</li>
-									<li class="ui-widget-content">Radiohead</li>
-									<li class="ui-widget-content">Red Hot Chili Peppers</li>
-									<li class="ui-widget-content">The Rolling Stones</li>
-									<li class="ui-widget-content">Smashing Pumpkins</li>
-									<li class="ui-widget-content">Stone Temple Pilots</li>
-									<li class="ui-widget-content">Tool</li>
-									<li class="ui-widget-content">The Tragically Hip</li>
-								</ol>
-							</div>
-						</div>
+								
+								<div class="btn-group">
+									<button type="button" onClick="submitMessage()" class="btn btn-margin btn-warning">Submit</button>
+								</div>
+								<p>
+									<div id="messageSuccess" class="alert alert-dismissable alert-success"  style="display:none">
+										<button type="button" class="close" data-dismiss="alert">×</button>
+										Message Sent!
+									</div>
+									<div id="messageFailed" class="alert alert-dismissable alert-danger" style="display:none">
+										asd
+									</div>
+								</p>
+							</fieldset>
+						</form>						
 					</div>
+					
 					<p class="center">
 						<a href="#">
 							<img src="img/ad_main.gif" class="ad" alt=""/>
 						</a>
 					</p>
+					<p class="center">
+						<a href="#">
+							<img src="img/ad_main.gif" class="ad" alt=""/>
+						</a>
+					</p>
+					
 				</div>
-				
 			</div>
 			
 			<div class="containerPadded col-md-4">
@@ -209,10 +196,45 @@
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery-ui-1.10.4.custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	
 	<script>
-		$( "#selectArtist" ).selectable();
-	</script>
+		/* called to validate contact us form */
+		function submitMessage(){
+			$('#messageFailed').hide();
+			$('#messageSuccess').hide();
+			
+			var subject = $('#subject').val();
+			var name = $('#name').val();
+			var email = $('#email').val();
+			var message = $('#message').val();			
+			
+			if (message.length == "") {	
+				$('#messageFailed').html("Please enter a Message.");
+				$('#messageFailed').show();
+			} else if (message.length <= 10) {	
+				$('#messageFailed').html("Please enter a real Message.");
+				$('#messageFailed').show();
+			} else if (subject == "") {	
+				$('#messageFailed').html("Please enter a Subject.");
+				$('#messageFailed').show();
+			} else if (name == "") {	
+				$('#messageFailed').html("Please fill in your Name.");
+				$('#messageFailed').show();
+			} else if (email == "") {	
+				$('#messageFailed').html("Please enter an Email.");
+				$('#messageFailed').show();
+			} else if (!validateEmail(email)) {	
+				$('#messageFailed').html("Please enter a valid Email");
+				$('#messageFailed').show();
+			} else {
+				$('#messageSuccess').show();
+			}
+		}
 
+		/* checks if an email is valid */
+		function validateEmail(email) {
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9])+$/;
+			return regex.test(email);
+		}
+	</script>
 	</body>
 </html>

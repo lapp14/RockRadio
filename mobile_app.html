@@ -167,14 +167,26 @@
 					AM
 					</div>
 				</div>
+				<div class="center">
+					<ul class="pagination">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+				
 			</div><!-- end previously played -->
 			
-			<h3>Request a Song</h3>
+			<h3>Request A Song</h3>
 			<div class="frameBackground">
 			
 				<form class="form-horizontal">
 					<fieldset>
-						<legend>Request a Song</legend>
+						<legend>Request A Song</legend>
 						<div class="col-lg-12">
 							<input type="text" class="form-control" id="submitArtist" placeholder="Artist"/>
 							<input type="text" class="form-control" id="submitSong" placeholder="Song"/>
@@ -201,7 +213,104 @@
 			
 			
 			
-			</div><!-- end recently played -->
+			</div><!-- end request song -->
+			
+			<h3>Radio Shows</h3>
+			<div class="frameBackground">
+				<h3>Mondays</h3>
+				<p>
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/hendrix.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Mondays @ 12:00pm - 1:00pm</div>
+						<h4 class="media-heading">
+						Classic Rock Hour
+						</h4>
+						With Jeff A.
+						</div>
+					</div>
+					
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/hetfield.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Mondays @ 3:00pm - 3:30pm</div>
+						<h4 class="media-heading">
+						Metal Marathon
+						</h4>
+						With Dan Lapp
+						</div>
+					</div>
+					
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/radiohead.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Mondays @ 8:00pm - 9:00pm</div>
+						<h4 class="media-heading">
+						The Alternative Rock Program
+						</h4>
+						With Steveo
+						</div>
+					</div>
+				</p>	
+				
+				<h3>Thursdays</h3>
+				<p>
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/layne.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Thursdays @ 2:00pm - 3:00pm</div>
+						<h4 class="media-heading">
+						90's Grunge Hour
+						</h4>
+						With Dan Lapp
+						</div>
+					</div>
+				</p>
+					
+				<h3>Fridays</h3>
+				<p>
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/les_paul.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Fridays @ 12:00pm - 2:00pm</div>
+						<h4 class="media-heading">
+						TGIF Request Fest
+						</h4>
+						With Steveo
+						</div>
+					</div>
+				</p>
+				
+				<h3>Saturdays</h3>
+				<p>
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/beatles.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Saturdays and Sundays @ 12:00pm - 12:15pm</div>
+						<h4 class="media-heading">
+						Beatle Break
+						</h4>
+						With Hayley Misztal
+						</div>
+					</div>
+				</p>
+				
+				<h3>Sundays</h3>
+				<p>
+					<div class="media">				
+						<a class="pull-left"><img class="prev-played" src="img/shows/beatles.jpg" alt=""></a>	
+						<div class="media-body">
+						<div class="time">Saturdays and Sundays @ 12:00pm - 12:15pm</div>
+						<h4 class="media-heading">
+						Beatle Break
+						</h4>
+						With Hayley Misztal
+						</div>
+					</div>
+				</p>
+
+				 
+			</div><!-- end radio shows -->
 			
 			<h3>Donate</h3>
 			<div class="frameBackground">
@@ -238,6 +347,7 @@
 	<script type="text/javascript">
 	$(function() {
 		$( "#mobileMenu" ).accordion({heightStyle: 'content'});
+		$( "#radioShows" ).accordion({heightStyle: 'content'});
 	});
 		/* called to validate song request form */
 		function submitSongRequest(){
