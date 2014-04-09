@@ -77,7 +77,7 @@
 	<!-- song selection container -->
 	<div class="container">
 	<div class="row">
-		<div class="col-md-4 noPadding" >
+		<div class="col-md-4 noPadding" style="padding-right: 40px;">
 			<div class="row" style="padding:0px;"> 
 				<div class="col-md-12 noMargin">
 					<div class="title">
@@ -194,7 +194,7 @@
 			<div class="scroll-pane songs">
 
 				<!-- superunknown -->
-				<div class="media">				
+				<div class="media album">				
 					<a class="pull-left"><img class="prev-played" src="../img/soundgarden-superunknown.jpg" alt=""></a>					
 					<div class="media-body">
 					<span class="right">1994</span>
@@ -221,8 +221,33 @@
 					</ol>
 					</div>
 				</div>
-			
-			
+				
+				<!-- badmotorfinger -->
+				<div class="media album">				
+					<a class="pull-left"><img class="prev-played" src="../img/soundgarden-badmotorfinger.jpg" alt=""></a>					
+					<div class="media-body">
+					<span class="right">1991</span>
+					<h4 class="media-heading">
+					<em>Badmotorfinger</em>
+					</h4>
+				
+					<ol id="selectSongs2">
+						<li class="ui-widget-content">1. Rusty Cage</li>
+						<li class="ui-widget-content">2. Outshined</li>
+						<li class="ui-widget-content">3. Slaves & Bulldozers</li>
+						<li class="ui-widget-content">4. Jesus Christ Pose</li>
+						<li class="ui-widget-content">5. Face Pollution</li>
+						<li class="ui-widget-content">6. Somewhere</li>
+						<li class="ui-widget-content">7. Searching With my Good Eye Closed</li>
+						<li class="ui-widget-content">8. Room a Thousand Years Wide</li>
+						<li class="ui-widget-content">9. Mind Riot</li>
+						<li class="ui-widget-content">10. Drawing Flies</li>
+						<li class="ui-widget-content">11. Holy Water</li>
+						<li class="ui-widget-content">12. New Damage</li>
+					</ol>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 		
@@ -365,10 +390,25 @@
 	$( "#addSongButton" ).click(function() {
 		$( "#addSongDialog" ).dialog( "close" )
 	});
+	
+	$(function() {
+		$( "#selectSongs" ).selectable({
+			stop: function() {
+				$('#selectSongs2 .ui-selected').removeClass('ui-selected');
+			}
+		});
+		
+		$( "#selectSongs2" ).selectable({
+			stop: function() {
+				$('#selectSongs .ui-selected').removeClass('ui-selected');
+			}
+		});
+	});
   
 	$(function selectable() {
 		$( "#selectArtist" ).selectable();
 		$( "#selectSongs" ).selectable();
+		$( "#selectSongs2" ).selectable();
 		$( "#queueSelect" ).selectable();
 		$( "#requestSelect" ).selectable();
 	});

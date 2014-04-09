@@ -1,8 +1,4 @@
 /* div sizes and layout */ 
-.albumTitle{
-	margin-bottom: 10px;
-}
-
 .title{
 	background: #555;
 	padding: 10px;
@@ -16,12 +12,21 @@
 	width: 750px;
 }
 
+.songs{
+	padding: 10px;
+	height:800px;
+}
+
 .prev-played{
 	margin-right: 10px;
 }
 
 .right{
 	float: right;
+}
+
+.album{
+	padding-bottom: 15px;
 }
 
 /* links, headers */
@@ -41,6 +46,7 @@ h4.media-heading{
 
 #selectArtist .ui-selecting,
 #selectSongs .ui-selecting ,
+#selectSongs2 .ui-selecting ,
 #queueSelect .ui-selecting ,
 #requestSelect .ui-selecting  { 
 	background: #FECA40; 
@@ -48,6 +54,7 @@ h4.media-heading{
 
 #selectArtist .ui-selected,
 #selectSongs .ui-selected ,
+#selectSongs2 .ui-selected ,
 #queueSelect .ui-selected ,
 #requestSelect .ui-selected { 
 	background: #F39814; 
@@ -55,11 +62,12 @@ h4.media-heading{
 }
 
 #selectArtist,
-#selectSongs { 
+#selectSongs,
+#selectSongs2 { 
 	list-style-type: none; 
 	margin: 0; 
 	padding: 0; 
-	height: 800px;
+	height: auto;
 }
 
 #queueSelect,
@@ -73,6 +81,7 @@ h4.media-heading{
 
 #selectArtist li,
 #selectSongs  li,
+#selectSongs2  li,
 #queueSelect li,
 #requestSelect li{ 
 	padding: 0.4em; 
