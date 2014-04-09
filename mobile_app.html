@@ -13,10 +13,10 @@
 	
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-			<div class="container" style="padding-top:10px">
-				<p>
+			<div style="padding-top:10px">
+				<p class="center">
 					<a href="#">
-						<img src="img/ad_player.gif"/>
+						<img class="ad center" src="img/ad_player.gif"/>
 					</a>
 				</p>
 			</div>
@@ -63,6 +63,7 @@
 						
 						<div class="">
 							<a class="controlButton" href="#" onclick="togglePlayPause()">
+								&nbsp;&nbsp;&nbsp;
 								<span id="playButton" class="glyphicon glyphicon-play"></span>
 								<span id="pauseButton" class="glyphicon glyphicon-pause" style="display:none;"></span>
 							</a>
@@ -168,15 +169,15 @@
 					</div>
 				</div>
 				<div class="center">
-					<ul class="pagination">
-						<li><a href="#">&laquo;</a></li>
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">&raquo;</a></li>
-					</ul>
+						<ul class="pagination pagination-lg">
+							<li><a href="#" style="font-size: 2em;">&laquo;</a></li>
+							<li class="active"><a href="#" style="font-size: 2em;">1</a></li>
+							<li><a href="#" style="font-size: 2em;"> 2</a></li>
+							<li><a href="#" style="font-size: 2em;"> 3</a></li>
+							<li><a href="#" style="font-size: 2em;"> 4</a></li>
+							<li><a href="#" style="font-size: 2em;">5</a></li>
+							<li><a href="#" style="font-size: 2em;">&raquo;</a></li>
+						</ul>
 				</div>
 				
 			</div><!-- end previously played -->
@@ -186,7 +187,6 @@
 			
 				<form class="form-horizontal">
 					<fieldset>
-						<legend>Request A Song</legend>
 						<div class="col-lg-12">
 							<input type="text" class="form-control" id="submitArtist" placeholder="Artist"/>
 							<input type="text" class="form-control" id="submitSong" placeholder="Song"/>
@@ -196,7 +196,7 @@
 						</div>
 						
 						<div class="btn-group">
-							<button type="button" onClick="submitSongRequest()" class="btn btn-margin btn-warning">Submit</button>
+							<input type="submit" onClick="submitSongRequest()" class="btn btn-margin btn-warning"/>
 						</div>
 						<p>
 							<div id="songSubmitSuccess" class="alert alert-dismissable alert-success"  style="display:none">
@@ -217,12 +217,12 @@
 			
 			<h3>Radio Shows</h3>
 			<div class="frameBackground">
-				<h3>Mondays</h3>
+				<h2>Mondays</h2>
 				<p>
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/hendrix.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Mondays @ 12:00pm - 1:00pm</div>
+						<div class="time capsule">Mondays @ 12:00pm - 1:00pm</div>
 						<h4 class="media-heading">
 						Classic Rock Hour
 						</h4>
@@ -233,7 +233,7 @@
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/hetfield.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Mondays @ 3:00pm - 3:30pm</div>
+						<div class="time capsule">Mondays @ 3:00pm - 3:30pm</div>
 						<h4 class="media-heading">
 						Metal Marathon
 						</h4>
@@ -244,7 +244,7 @@
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/radiohead.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Mondays @ 8:00pm - 9:00pm</div>
+						<div class="time capsule">Mondays @ 8:00pm - 9:00pm</div>
 						<h4 class="media-heading">
 						The Alternative Rock Program
 						</h4>
@@ -253,12 +253,12 @@
 					</div>
 				</p>	
 				
-				<h3>Thursdays</h3>
+				<h2>Thursdays</h2>
 				<p>
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/layne.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Thursdays @ 2:00pm - 3:00pm</div>
+						<div class="time capsule">Thursdays @ 2:00pm - 3:00pm</div>
 						<h4 class="media-heading">
 						90's Grunge Hour
 						</h4>
@@ -267,12 +267,12 @@
 					</div>
 				</p>
 					
-				<h3>Fridays</h3>
+				<h2>Fridays</h2>
 				<p>
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/les_paul.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Fridays @ 12:00pm - 2:00pm</div>
+						<div class="time capsule">Fridays @ 12:00pm - 2:00pm</div>
 						<h4 class="media-heading">
 						TGIF Request Fest
 						</h4>
@@ -281,12 +281,12 @@
 					</div>
 				</p>
 				
-				<h3>Saturdays</h3>
+				<h2>Saturdays</h2>
 				<p>
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/beatles.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Saturdays and Sundays @ 12:00pm - 12:15pm</div>
+						<div class="time capsule">Saturdays @ 12:00pm - 12:15pm</div>
 						<h4 class="media-heading">
 						Beatle Break
 						</h4>
@@ -295,12 +295,12 @@
 					</div>
 				</p>
 				
-				<h3>Sundays</h3>
+				<h2>Sundays</h2>
 				<p>
 					<div class="media">				
 						<a class="pull-left"><img class="prev-played" src="img/shows/beatles.jpg" alt=""></a>	
 						<div class="media-body">
-						<div class="time">Saturdays and Sundays @ 12:00pm - 12:15pm</div>
+						<div class="time capsule">Sundays @ 12:00pm - 12:15pm</div>
 						<h4 class="media-heading">
 						Beatle Break
 						</h4>
@@ -316,17 +316,16 @@
 			<div class="frameBackground">
 				<form class="form-horizontal">
 					<fieldset>
-						<legend>Please Donate</legend>
-							<p>Keeping our station up and running, and free of commercials isn't cheap.
-							If you like what we are doing here, please consider donating. Even a few dollars is a big
-							help. Thank you and enjoy the rock!
-							</p>
-							<br/>
-							<p class="center">
+						<p>Keeping our station up and running, and free of commercials isn't cheap.
+						If you like what we are doing here, please consider donating. Even a few dollars is a big
+						help. Thank you and enjoy the rock!
+						</p>
+						<br/>
+						<p class="center">
 							<a href="#">
 								<img src="img/paypal.gif" alt="Donate with Paypal"/>
 							</a>
-							</p>
+						</p>
 					</fieldset>
 				</form>
 			

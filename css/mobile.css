@@ -1,4 +1,90 @@
+body{
+	font-size: 2.8em;
+}
+
+h2{
+	font-size: 1.5em
+}
+
 .frameBackground{
 	background-color: #4e5d6c;
 	height: auto;
 }
+
+.ui-accordion-header{
+	font-size: 1.5em;
+}
+
+.glyphicon{
+	font-size: 1.6em;
+	vertical-align: middle;
+}
+
+.pages{
+	font-size: 5em;
+}
+
+.form-control{
+	height: 3em;
+}
+
+div.time{
+	color: #DF691A;
+	margin-bottom: 10px;
+	padding: 5px;
+	font-size: 1.2em
+}
+
+/* Player controls */
+.player{
+	margin: 0px auto;
+	max-width: 1000px;
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+
+.playerControls{
+	height: 90px;
+	padding-top: 20px;
+}
+
+.ui-slider {
+    height: 25px;
+    width: 250px;
+    padding-left: 5px;
+	margin: 10px;
+	margin-right: 35px;
+}
+
+.ui-slider .ui-slider-handle{
+	margin-top: 4px;
+}
+
+/* div styles */
+.capsule{
+	background: #000;
+	font-size: 0.8em;
+	padding: 3px;
+	margin-bottom: 10px;
+}
+
+/* images */
+img.soundbars{
+	margin-left: 30px;
+	width: 200px;
+	height: 50px;
+}
+
+img.ad{
+	height: 120px;
+	width: 800px;
+	border: 1px solid black;
+}
+
+.prev-played{
+	border: 1px solid black;
+	height: 180px;
+	width: 180px;
+}
+
+
