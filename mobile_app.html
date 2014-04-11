@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>q
 <html lang="en">
 	<head>
 		<title>Rock: Mobile App</title>
@@ -51,12 +51,15 @@
 					</div>
 						
 					<div class="playerControls">
-						<div id="volumeSlider"></div>
 						<div class="right">
-							<a class="controlButton" href="#" onclick="volumeClick()">
-								<span id="speakerMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
-								<span id="speakerLow" class="glyphicon glyphicon-volume-down"></span>
-								<span id="speakerHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+							<a class="controlButton" href="#" onclick="mobileVolumeClick()">
+								<span id="soundMute" class="glyphicon glyphicon-volume-off" style="display:none;"></span>
+								<span id="soundHalf" class="glyphicon glyphicon-volume-down"></span>
+								<span id="soundHigh" class="glyphicon glyphicon-volume-up" style="display:none;"></span>
+								
+								<img src="img/playersound_mute.png" id="playerSoundMute" style="display: none"/>
+								<img src="img/playersound_half.png" id="playerSoundHalf" />
+								<img src="img/playersound_full.png" id="playerSoundFull" style="display: none"/>
 								&nbsp;
 							</a>				
 						</div>
@@ -344,6 +347,47 @@
 	<script src="js/player.js"></script>
 	
 	<script type="text/javascript">
+	var playerVolume = 1;
+	
+	function mobileVolumeClick(){
+		if(playerVolume < 2){
+			playerVolume++;
+		} else {
+			playerVolume= 0;
+		}
+		
+		switch(playerVolume){
+			case 0:
+				$( "#soundMute" ).show();
+				$( "#soundHalf" ).hide();
+				$( "#soundHigh" ).hide();
+				$( "#playerSoundMute" ).show();
+				$( "#playerSoundHalf" ).hide();
+				$( "#playerSoundFull" ).hide();
+				break;
+				
+			case 1:
+				$( "#soundMute" ).hide();
+				$( "#soundHalf" ).show();
+				$( "#soundHigh" ).hide();
+				$( "#playerSoundMute" ).hide();
+				$( "#playerSoundHalf" ).show();
+				$( "#playerSoundFull" ).hide();
+				break;
+				
+			case 2:
+				$( "#soundMute" ).hide();
+				$( "#soundHalf" ).hide();
+				$( "#soundHigh" ).show();
+				$( "#playerSoundMute" ).hide();
+				$( "#playerSoundHalf" ).hide();
+				$( "#playerSoundFull" ).show();
+				break;		
+		}
+	
+	};
+	
+	
 	$(function() {
 		$( "#mobileMenu" ).accordion({heightStyle: 'content'});
 		$( "#radioShows" ).accordion({heightStyle: 'content'});
